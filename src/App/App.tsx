@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,3 +11,8 @@ function App() {
 }
 
 export default App;
+
+// Paths for Router
+// Welcome = "/"
+// App = "/home"
+// Favorites = "/favorites"
