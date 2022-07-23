@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import { Route } from "react-router-dom";
+import Welcome from "../Welcome/Welcome";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">Hello</header>
-    </div>
+    <Switch>
+      <Route exact path="/" >
+        <Welcome />
+      </Route>
+    </Switch>
   );
 }
 

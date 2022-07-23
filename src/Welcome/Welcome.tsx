@@ -3,7 +3,7 @@ import "./Welcome.css";
 
 const Welcome = () => {
   return (
-    <div></div>
+    <div className="welcome-container">WELCOME</div>
   )
 };
 
