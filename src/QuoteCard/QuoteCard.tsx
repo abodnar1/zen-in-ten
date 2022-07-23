@@ -1,8 +1,9 @@
 import React from "react";
+import "./QuoteCard.css";
 
 const QuoteCard = () => {
   return (
-    <div></div>
+    <div className="card-wrapper">CARD</div>
   )
 };
 
