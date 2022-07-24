@@ -31,7 +31,6 @@ const Form = ({setAllQuotes}: formProps) => {
   fetch(e.target.value)
   .then(response => response.json())
   .then(data => {
-    setAllQuotes([])
     setAllQuotes(data)
     }
     )
