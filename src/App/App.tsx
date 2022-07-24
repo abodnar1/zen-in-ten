@@ -12,8 +12,11 @@ const App = () => {
   const [allQuotes, setAllQuotes] = useState<Quote[]>([])
 
   useEffect(() => {
-    fetch('')
-  })
+    fetch('https://zenquotes.io/api/random?key=11ef57ae8191dde524535934c158c4543950e06c')
+    .then(response => response.json())
+    .then(data => setAllQuotes(data))
+    .catch(error => console.log(error.message))
+  }, []);
 
   return (
     <Switch>
