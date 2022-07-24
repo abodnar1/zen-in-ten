@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Welcome from "../Welcome/Welcome";
 import { Route, Switch } from "react-router-dom";
+import Quotes from '../Quotes/Quotes';
 
-interface Quote {
+export interface Quote {
   q: string;
   a: string;
   h: string;
@@ -31,6 +32,7 @@ const App = () => {
           <h1>Hello World</h1>
             {error && <p>{error}</p>}
             {allQuotes.length > 0 && <p>{allQuotes[0].q}</p>}
+            <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} />
         </div>
       </Route>
     </Switch> 
@@ -43,14 +45,4 @@ export default App;
 // Welcome = "/"
 // App = "/home"
 // Favorites = "/favorites"
-
-
-
-    /* <Switch>
-      <Route exact path="/" >
-        <Welcome />
-      </Route>
-      <Route path="/home" >
-      </Route>
-    </Switch> */
 
