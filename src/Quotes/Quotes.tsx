@@ -14,8 +14,7 @@ const Quotes = ({allQuotes, setAllQuotes} : QuotesProps ) => {
       <QuoteCard 
         quote={quote.q}
         author={quote.a}
-        blockquote={quote.h}
-        key={Date.now()}
+        key={quote.h}
         id={Date.now()}
       />
     )

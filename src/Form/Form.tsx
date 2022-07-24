@@ -26,13 +26,29 @@ const Form = ({setAllQuotes}: formProps) => {
     .then(data => setMoods(data))
   })
 
+ const fetchKeyword = (e: any): void => {
+  e.preventDefault()
+  fetch(e.target.value)
+  .then(response => response.json())
+  .then(data => {
+    setAllQuotes([])
+    console.log(data)
+    setAllQuotes(data)
+    }
+    )
+ }
+ 
+ const moodValues = moods.map(mood => {
+   return(
+     <option value={mood.l} key={mood.k}>{mood.k}</option>
+   )
+})
+
   return (
     <form>
-      <select 
-        name="select-mood">
-          {moods.map(mood => (
-            <option >{mood.k}</option>
-          ))}
+      <select name="select-mood" id="selectMood" onChange={(e) => fetchKeyword(e)}>
+        <option value="choose">Choose a Mood</option>
+        {moodValues}
         </select>
         
     </form>
