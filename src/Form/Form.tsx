@@ -32,7 +32,6 @@ const Form = ({setAllQuotes}: formProps) => {
   .then(response => response.json())
   .then(data => {
     setAllQuotes([])
-    console.log(data)
     setAllQuotes(data)
     }
     )
