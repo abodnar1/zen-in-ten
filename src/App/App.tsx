@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Welcome from "../Welcome/Welcome";
 import { Route, Switch } from "react-router-dom";
@@ -10,6 +10,10 @@ interface Quote {
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<Quote[]>([])
+
+  useEffect(() => {
+    fetch('')
+  })
 
   return (
     <Switch>
