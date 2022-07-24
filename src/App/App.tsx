@@ -3,6 +3,7 @@ import './App.css';
 import Welcome from "../Welcome/Welcome";
 import { Route, Switch } from "react-router-dom";
 import Quotes from '../Quotes/Quotes';
+import Form from '../Form/Form';
 
 export interface Quote {
   q: string;
@@ -32,6 +33,7 @@ const App = () => {
           <h1>Hello World</h1>
             {error && <p>{error}</p>}
             {allQuotes.length > 0 && <p>{allQuotes[0].q}</p>}
+            <Form setAllQuotes={setAllQuotes}/>
             <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} />
         </div>
       </Route>
