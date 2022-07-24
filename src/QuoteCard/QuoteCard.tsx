@@ -4,11 +4,10 @@ import "./QuoteCard.css";
 interface QuoteCardProps {
   quote: string;
   author: string;
-  blockquote: string;
   id: number;
 }
 
-const QuoteCard = ({quote, author, blockquote, id} : QuoteCardProps) => {
+const QuoteCard = ({quote, author, id} : QuoteCardProps) => {
   return (
     <div className="card-wrapper">
       <h2>{quote}</h2>
