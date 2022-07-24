@@ -15,7 +15,7 @@ const App = () => {
   const [error, setError] = useState<string>('')
 
   useEffect(() => {
-    fetch('https://zenquotes.io/api/random?key=11ef57ae8191dde524535934c158c4543950e06c')
+    fetch('https://zenquotes.io/api/quotes?key=11ef57ae8191dde524535934c158c4543950e06c')
     .then(response => response.json())
     .then(data => setAllQuotes(data))
     .catch(error => setError(error.message))
@@ -45,4 +45,7 @@ export default App;
 // Welcome = "/"
 // App = "/home"
 // Favorites = "/favorites"
+
+
+
 
