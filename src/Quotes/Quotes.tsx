@@ -9,12 +9,12 @@ interface QuotesProps {
 }
 
 const Quotes = ({allQuotes, setAllQuotes} : QuotesProps ) => {
-  const quoteCards = allQuotes.map(quote => {
+  const quoteCards = allQuotes.map((quote, index) => {
     return (
       <QuoteCard 
         quote={quote.q}
         author={quote.a}
-        key={quote.h}
+        key={index}
         id={Date.now()}
       />
     )

@@ -29,7 +29,7 @@ const App = () => {
         <Welcome />
       </Route>
       <Route path="/home" >
-            {error && <p>{error}</p>}
+            {/* {error && <p>{error}</p>} */}
             <Form setAllQuotes={setAllQuotes}/>
             {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} />}
       </Route>
