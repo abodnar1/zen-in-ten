@@ -22,11 +22,18 @@ const App = () => {
 
 
   return (
-    <div>
-      <h1>Hello World</h1>
-        {error && <p>{error}</p>}
-        {allQuotes.length > 0 && <p>{allQuotes[0].q}</p>}
-    </div>
+    <Switch>
+      <Route exact path="/" >
+        <Welcome />
+      </Route>
+      <Route path="/home" >
+        <div>
+          <h1>Hello World</h1>
+            {error && <p>{error}</p>}
+            {allQuotes.length > 0 && <p>{allQuotes[0].q}</p>}
+        </div>
+      </Route>
+    </Switch> 
   );
 }
 
