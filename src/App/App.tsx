@@ -9,7 +9,7 @@ import Favorites from '../Favorites/Favorites';
 export interface Quote {
   q: string;
   a: string;
-  h: string;
+  h?: string;
 }
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
       </Route>
       <Route path="/home" >
             <Form setAllQuotes={setAllQuotes}/>
-            {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} setFavList={setFavList} />}
+            {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} setFavList={setFavList} favList={favList} />}
       </Route>
 			<Route exact path="/favorites" >
         <Favorites />

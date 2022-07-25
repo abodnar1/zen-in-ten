@@ -8,7 +8,7 @@ export interface Quote {
 }
 
 interface formProps {
-  setAllQuotes: React.Dispatch<React.SetStateAction<Quote[]>>
+	setAllQuotes: Function;
 }
 
 

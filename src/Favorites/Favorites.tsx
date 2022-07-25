@@ -3,7 +3,7 @@ import "./Favorites.css";
 
 const Favorites = () => {
 
-  return (
+  return ( 
     <div>
 			<h2>See your favorite quotes below!</h2>
 		</div>
