@@ -4,6 +4,7 @@ import Welcome from "../Welcome/Welcome";
 import { Route, Switch } from "react-router-dom";
 import Quotes from '../Quotes/Quotes';
 import Form from '../Form/Form';
+import Favorites from '../Favorites/Favorites';
 
 export interface Quote {
   q: string;
@@ -13,15 +14,20 @@ export interface Quote {
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<Quote[]>([])
+	const [favList, setFavList] = useState<Quote[]>([])
 
   return (
+
     <Switch>
       <Route exact path="/" >
         <Welcome />
       </Route>
       <Route path="/home" >
             <Form setAllQuotes={setAllQuotes}/>
-            {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} />}
+            {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} setFavList={setFavList} />}
+      </Route>
+			<Route exact path="/favorites" >
+        <Favorites />
       </Route>
     </Switch> 
   );
