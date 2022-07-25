@@ -21,15 +21,15 @@ const QuoteCard = ({quote, author, id, setFavList} : QuoteCardProps) => {
 	
 	const handleFavAddClick = (e: any): void => {
 		setIsFav(true) 
-		setFavList(isFav)
+		console.log(isFav)
+		// setFavList(prevFavList => [...prevFavList, ])
 	}
-
 
   return (
     <div className="card-wrapper">
       <h2>{quote}</h2>
       <p>{author}</p>
-			<AiOutlineHeart onClick={(e) => handleFavAddClick}/>
+			<AiOutlineHeart onClick={(e) => handleFavAddClick(e)}/>
     </div>
   )
 };
