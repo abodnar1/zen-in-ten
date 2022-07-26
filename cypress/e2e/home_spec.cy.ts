@@ -1,5 +1,8 @@
+import { createYield } from "typescript"
+
 describe('Homepage', () => {
   beforeEach(() => {
+    cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {fixture: "quotesByKeyword"})
     cy.visit('http://localhost:3000/home')
   })
 
