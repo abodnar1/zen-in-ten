@@ -19,5 +19,11 @@ describe('Homepage', () => {
   it('should have a dropdown menu to select mood and display appropriate cards', () => {
    cy.get('form').find('select').select('fairness')
    cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
+
+   cy.get('.card-wrapper').eq(0).contains('h2', 'Everything that is made beautiful and fair and lovely is made for the eye of one who sees.')
+   cy.get('.card-wrapper').eq(0).contains('p', 'Rumi')
+
+   cy.get('.card-wrapper').eq(1).contains('h2', 'It is not fair to ask of others what you are not willing to do yourself.')
+   cy.get('.card-wrapper').eq(1).contains('p', 'Eleanor Roosevelt')
   })
 })
