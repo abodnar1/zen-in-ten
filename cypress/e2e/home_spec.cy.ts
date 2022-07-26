@@ -15,8 +15,9 @@ describe('Homepage', () => {
     cy.url().should('eq', 'http://localhost:3000/home')
   })
 
-  it('should have a dropdown menu to select mood', () => {
-    
+  it('should have a dropdown menu to select mood and display appropriate cards', () => {
+   cy.get('form').find('select').select('fairness')
+   cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
   })
 
 })
