@@ -14,8 +14,8 @@ const App = () => {
   return (
 		<div>
 			<nav>
-				<Link to='/Favorites'>Favorites</Link>
-				<Link to='/Home'>Home</Link>
+				<Link to='/favorites'>Favorites</Link>
+				<Link to='/home'>Home</Link>
 			</nav>
 
       <Switch>

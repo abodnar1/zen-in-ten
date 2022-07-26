@@ -18,7 +18,7 @@ const Form = ({setAllQuotes}: formProps) => {
     fetch("api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c")
     .then(response => response.json())
     .then(data => setMoods(data))
-  })
+  }, [])
   // need a .catch() for error handling
 
  const fetchKeyword = (e: any): void => {
