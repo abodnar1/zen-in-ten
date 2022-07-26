@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 
-export interface Quote {
-  q: string;
-  a: string;
-  h: string;
-}
-
 interface formProps {
 	setAllQuotes: Function;
 }
-
+// why can't we change this to the React.Dispatch?
 
 interface Mood{
   k: string;
@@ -25,15 +19,17 @@ const Form = ({setAllQuotes}: formProps) => {
     .then(response => response.json())
     .then(data => setMoods(data))
   })
+  // need a .catch() for error handling
 
  const fetchKeyword = (e: any): void => {
   e.preventDefault()
+
   fetch(e.target.value)
-  .then(response => response.json())
-  .then(data => {
-    setAllQuotes(data)
-    }
-    )
+    .then(response => response.json())
+    .then(data => {
+      setAllQuotes(data)
+    })
+    // need a .catch() for error handling
  }
  
  const moodValues = moods.map(mood => {
@@ -45,12 +41,10 @@ const Form = ({setAllQuotes}: formProps) => {
   return (
     <form>
       <select name="select-mood" id="selectMood" onChange={(e) => fetchKeyword(e)}>
-        <option value="choose">Choose a Mood</option>
+        <option value="choose">---Choose a Mood---</option>
         {moodValues}
-        </select>
-        
+      </select>
     </form>
-
   )
 };
 

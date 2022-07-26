@@ -1,24 +1,26 @@
 import React from "react";
 import "./Favorites.css";
-import {Quote} from '../App/App'
+import { QuoteInterface } from "../interfaces";
 
 interface FavoriteProps {
-	setFavList: React.Dispatch<React.SetStateAction<Quote[]>>;
-	favList: Quote[];
+	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
+	favList: QuoteInterface[];
 }
 
 const Favorites = ({setFavList, favList}: FavoriteProps) => {
 	const favorites = favList.map(favorite => {
+    // we need to assign a key for this map to clear warning in console
 		return(
-			<div className="favorites-container">
-				<h2>{favorite.q}</h2>
-				<p>{favorite.a}</p>
-				<button>hi</button>
-			</div>
+      <div className="favorite-card-wrapper">
+        <h2>"{favorite.q}"</h2>
+        <p>-{favorite.a}</p>
+        <button>hi</button>
+      </div>
 		)
 	})
+
   return ( 
-		<div>
+		<div className="favorites-container">
 			{favorites}
 		</div>
   )
