@@ -6,7 +6,7 @@ import {AiOutlineHeart} from "react-icons/ai"
 interface QuoteCardProps {
   quote: string;
   author: string;
-  id: number;
+  id: string;
 	setFavList: React.Dispatch<React.SetStateAction<Quote[]>>;
 	favList: Quote[];
 }
@@ -20,26 +20,30 @@ interface Quote {
 const QuoteCard = ({quote, author, id, setFavList, favList} : QuoteCardProps) => {
 	const [isFav, setIsFav] = useState<boolean>(false)
 	
-
-	const addFavorite = (e: any): void => {
+	const addFavorite = (e: React.FormEvent): void => {
 		e.preventDefault()
 		const newFav = {q: quote, a: author}
-		setFavList([...favList, newFav])
+		setFavList(favList => [...favList, newFav])
+		setIsFav(true)
+		console.log('favList:', favList)
+		console.log('new Fav:', newFav)
 	}
 
 	const deleteFavorite = (e: any) => {
 		e.preventDefault()
-		console.log("delete")
-
+		const favQuotes = favList.filter(favQuote => favQuote.q !== quote)
+		setFavList(favQuotes)
+		console.log('favvvv QUOTES:', favQuotes)
+		setIsFav(false)
 	}
 
   return (
     <div className="card-wrapper">
       <h2>{quote}</h2>
       <p>{author}</p>
-			{isFav ? <button className="favorite-button" onClick={(e) => addFavorite(e)}>add favorite</button> 
+			{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button> 
 			: 
-			<button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button>}
+			<button className="favorite-button" onClick={(e) => addFavorite(e)}>add favorite</button>}
     </div>
   )
 };
