@@ -6,17 +6,21 @@ import QuoteCard from "../QuoteCard/QuoteCard";
 interface QuotesProps {
   allQuotes: Quote[];
   setAllQuotes: React.Dispatch<React.SetStateAction<Quote[]>>
+	setFavList: React.Dispatch<React.SetStateAction<Quote[]>>
+	favList: Quote[];
 }
 
-const Quotes = ({allQuotes, setAllQuotes} : QuotesProps ) => {
+const Quotes = ({allQuotes, setAllQuotes, setFavList, favList} : QuotesProps ) => {
   const quoteCards = allQuotes.map((quote, index) => {
     return (
       <QuoteCard 
-        quote={quote.q}
-        author={quote.a}
-        key={index}
-        id={Date.now()}
-      />
+				quote={quote.q}
+				author={quote.a}
+				key={index}
+				id={quote.q}
+				setFavList={setFavList}
+				favList={[]}
+				/>
     )
   })
   return (
