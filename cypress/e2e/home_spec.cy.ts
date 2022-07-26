@@ -1,5 +1,3 @@
-import { createYield } from "typescript"
-
 describe('Homepage', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/home')
@@ -19,5 +17,4 @@ describe('Homepage', () => {
    cy.get('form').find('select').select('fairness')
    cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
   })
-
 })
