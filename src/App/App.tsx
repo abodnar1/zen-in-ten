@@ -19,8 +19,8 @@ const App = () => {
   return (
 		<div>
 			<nav>
-			<Link to='/Favorites'>Favorites</Link>
-			<Link to='/Home'>Home</Link>
+				<Link to='/Favorites'>Favorites</Link>
+				<Link to='/Home'>Home</Link>
 			</nav>
 
     <Switch>
@@ -40,12 +40,6 @@ const App = () => {
 }
 
 export default App;
-
-// Paths for Router
-// Welcome = "/"
-// App = "/home"
-// Favorites = "/favorites"
-
 
 
 
