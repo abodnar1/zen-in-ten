@@ -18,7 +18,7 @@ const Quotes = ({ allQuotes, setAllQuotes, setFavList, favList } : QuotesProps )
 				author={quote.a}
 				key={index}
 				id={quote.q}
-				favList={[]}
+				favList={favList}
 				setFavList={setFavList}
       />
     )

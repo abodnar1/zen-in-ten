@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./QuoteCard.css";
 import { QuoteInterface } from "../interfaces";
 // import {AiFillHeart} from "react-icons/ai"
@@ -14,6 +14,10 @@ interface QuoteCardProps {
 
 const QuoteCard = ({ quote, author, id, setFavList, favList } : QuoteCardProps) => {
 	const [isFav, setIsFav] = useState<boolean>(false)
+
+  useEffect(() => {
+    setIsFav(!!favList.find(fav => fav.q === quote))
+  })
 	
 	const addFavorite = (e: React.FormEvent): void => {
 		e.preventDefault()
