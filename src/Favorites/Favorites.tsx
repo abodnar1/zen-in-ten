@@ -1,6 +1,7 @@
 import React from "react";
 import "./Favorites.css";
 import { QuoteInterface } from "../interfaces";
+import FavoriteCard from "../FavoriteCard/FavoriteCard";
 
 interface FavoriteProps {
 	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
@@ -8,30 +9,23 @@ interface FavoriteProps {
 }
 
 const Favorites = ({setFavList, favList}: FavoriteProps) => {
-	const favorites = favList.map(favorite => {
-    const deleteFavorite = (e: any) => {
-      e.preventDefault()
-      const favQuotes = favList.filter(favQuote => favQuote.q !== favorite.q)
-      setFavList(favQuotes)
-    }
-    // we need to assign a key for this map to clear warning in console
-		return(
-      <div className="favorite-card-wrapper">
-				<div className="top-container">
-					<h2>"{favorite.q}"</h2>
-					<p>-{favorite.a}</p>
-				</div>
-				<div className="bottom-container">
-        	<button className="delete-button" onClick={(e) => deleteFavorite(e)}>Delete</button>
-				</div>
-      </div>
-		)
-	})
 
+    const favQuotes = favList.map((fav, index) => {
+      return (
+        <FavoriteCard
+          quote={fav.q}
+          author={fav.a}
+          key={index}
+          id={fav.q}
+          setFavList={setFavList}
+          favList={favList}
+        />
+      )
+    })
   return ( 
-		<div className="favorites-container">
-			{favorites}
-		</div>
+    <div className="favorites-container">
+    {favQuotes}
+  </div>
   )
 };
 
