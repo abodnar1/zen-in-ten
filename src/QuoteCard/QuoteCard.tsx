@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./QuoteCard.css";
 import { QuoteInterface } from "../interfaces";
-// import {AiFillHeart} from "react-icons/ai"
-// import {AiOutlineHeart} from "react-icons/ai"
+import {AiFillHeart} from "react-icons/ai"
+import {AiOutlineHeart} from "react-icons/ai"
 
 interface QuoteCardProps {
   quote: string;
@@ -37,14 +37,16 @@ const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCard
   return (
     <div className="card-wrapper">
 			<div className="top-container">
-				<h2>"{quote}"</h2>
-				<p>-{author}</p>
-        <img src={image} className="quote-image"></img>
+				<h2 className="quote" >"{quote}"</h2>
+				<p className="author" >-{author}</p>
+			</div>
+			<div className="middle-container">
+				<img src={image} className="quote-image"></img>
 			</div>
 			<div className="bottom-container">
-				{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button> 
+				{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}><AiFillHeart className="delete-heart"/></button> 
 				: 
-				<button className="favorite-button" onClick={(e) => addFavorite(e)}>add favorite</button>}
+				<button className="favorite-button" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></button>}
 			</div>
     </div>
   )
