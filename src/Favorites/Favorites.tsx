@@ -23,7 +23,7 @@ const Favorites = ({setFavList, favList}: FavoriteProps) => {
       )
     })
   return ( 
-    <div className="favorite-card-wrapper">
+    <div className="favorites-container">
     {favQuotes}
   </div>
   )

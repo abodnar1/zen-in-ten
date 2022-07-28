@@ -1,5 +1,6 @@
 import React from 'react'
 import { QuoteInterface } from '../interfaces';
+import "./FavoriteCard.css"
 
 interface FavoriteCardProps{
   quote: string,
@@ -18,14 +19,14 @@ const FavoriteCard = ({quote, author, setFavList, favList, id}: FavoriteCardProp
 
   return (
     <div className="favorite-card-wrapper">
-    <div className="top-container">
-      <h2>"{quote}"</h2>
-      <p>-{author}</p>
+      <div className="top-container">
+        <h2>"{quote}"</h2>
+        <p>-{author}</p>
+      </div>
+      <div className="bottom-container">
+        <button className="delete-button" onClick={(e) => deleteFavorite(e)}>Delete</button>
+      </div>
     </div>
-    <div className="bottom-container">
-      <button className="delete-button" onClick={(e) => deleteFavorite(e)}>Delete</button>
-    </div>
-  </div>
   )
 }
 
