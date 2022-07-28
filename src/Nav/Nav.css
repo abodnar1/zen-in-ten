@@ -1,8 +1,10 @@
 .nav-bar {
-	margin: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid black;
+	width: 100%;
 }
 
 .home-nav {
