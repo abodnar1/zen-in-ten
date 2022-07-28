@@ -2,7 +2,7 @@ import React from 'react'
 import { QuoteInterface } from '../interfaces';
 import "./FavoriteCard.css"
 // import DeleteIcon from 'public/assets/delete-icon.png'
-import {AiOutlineDelete} from "react-icons/ai"
+import { AiOutlineDelete } from "react-icons/ai";
 
 interface FavoriteCardProps{
   quote: string,

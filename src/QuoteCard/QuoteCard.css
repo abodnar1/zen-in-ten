@@ -1,7 +1,6 @@
 .card-wrapper {
 	display: flex;
 	flex-direction: column;
-  cursor: pointer;
   border: 2px solid gray;
 	border-radius: 10px;
 }
@@ -56,4 +55,5 @@
 .delete-heart, 
 .add-heart {
 	font-size: 1.5rem;
+	cursor: pointer;
 }
