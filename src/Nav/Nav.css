@@ -1,0 +1,29 @@
+.nav-bar {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.home-nav {
+	font-size: 30px;
+	margin-right: 10px;
+	color: black;
+}
+
+.favorites-nav {
+	text-decoration: none;
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+}
+
+.favorites-nav:hover {
+	text-decoration: underline;
+}
+
+.active {
+	text-decoration: underline;
+	border-radius: 5px;
+	padding: 2px;
+}

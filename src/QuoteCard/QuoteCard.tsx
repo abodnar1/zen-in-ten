@@ -35,11 +35,15 @@ const QuoteCard = ({ quote, author, id, setFavList, favList } : QuoteCardProps) 
 
   return (
     <div className="card-wrapper">
-      <h2>"{quote}"</h2>
-      <p>-{author}</p>
-			{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button> 
-			: 
-			<button className="favorite-button" onClick={(e) => addFavorite(e)}>add favorite</button>}
+			<div className="top-container">
+				<h2>"{quote}"</h2>
+				<p>-{author}</p>
+			</div>
+			<div className="bottom-container">
+				{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button> 
+				: 
+				<button className="favorite-button" onClick={(e) => addFavorite(e)}>add favorite</button>}
+			</div>
     </div>
   )
 };

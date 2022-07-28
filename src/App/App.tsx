@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch, Link } from "react-router-dom";
-import './App.css';
+import { Route, Switch, NavLink } from "react-router-dom";
 import { QuoteInterface } from "../interfaces";
+import './App.css';
+
+// page components
 import Welcome from "../Welcome/Welcome";
 import Quotes from '../Quotes/Quotes';
 import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
+import Nav from '../Nav/Nav'
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<QuoteInterface[]>([])
@@ -13,11 +16,6 @@ const App = () => {
 
   return (
 		<div>
-			<nav>
-				<Link to='/favorites'>Favorites</Link>
-				<Link to='/home'>Home</Link>
-			</nav>
-
       <Switch>
 
         <Route exact path="/" >
@@ -25,11 +23,13 @@ const App = () => {
         </Route>
 
         <Route path="/home" >
+					<Nav />
           <Form setAllQuotes={setAllQuotes}/>
           {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/>}
         </Route>
 
         <Route exact path="/favorites" >
+					<Nav />
           <Favorites favList={favList} setFavList={setFavList} />
         </Route>
 

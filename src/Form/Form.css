@@ -1,0 +1,11 @@
+form {
+	display: flex;
+	justify-content: center;
+}
+
+.dropdown {
+	width: 35%;
+	padding: 7px;
+	font-size: 17px;
+	text-align: center;
+}
