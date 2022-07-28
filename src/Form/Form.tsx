@@ -40,8 +40,8 @@ const Form = ({setAllQuotes}: formProps) => {
 
   return (
     <form>
-      <select name="select-mood" id="selectMood" onChange={(e) => fetchKeyword(e)}>
-        <option value="choose">---Choose a Mood---</option>
+      <select className="dropdown" name="select-mood" id="selectMood" onChange={(e) => fetchKeyword(e)}>
+        <option value="choose">Choose a Mood</option>
         {moodValues}
       </select>
     </form>
