@@ -7,12 +7,13 @@ import { QuoteInterface } from "../interfaces";
 interface QuoteCardProps {
   quote: string;
   author: string;
+  image: string;
   id: string;
 	favList: QuoteInterface[];
 	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 }
 
-const QuoteCard = ({ quote, author, id, setFavList, favList } : QuoteCardProps) => {
+const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCardProps) => {
 	const [isFav, setIsFav] = useState<boolean>(false)
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const QuoteCard = ({ quote, author, id, setFavList, favList } : QuoteCardProps) 
 	
 	const addFavorite = (e: React.FormEvent): void => {
 		e.preventDefault()
-		const newFav = {q: quote, a: author}
+		const newFav = {q: quote, a: author, i: image}
 		setIsFav(true)
 		setFavList(favList => [...favList, newFav])
 	}
@@ -38,6 +39,7 @@ const QuoteCard = ({ quote, author, id, setFavList, favList } : QuoteCardProps) 
 			<div className="top-container">
 				<h2>"{quote}"</h2>
 				<p>-{author}</p>
+        <img src={image} className="quote-image"></img>
 			</div>
 			<div className="bottom-container">
 				{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}>delete favorite</button> 

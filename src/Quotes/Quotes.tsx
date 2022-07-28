@@ -16,6 +16,7 @@ const Quotes = ({ allQuotes, setAllQuotes, setFavList, favList } : QuotesProps )
       <QuoteCard 
 				quote={quote.q}
 				author={quote.a}
+        image={quote.i}
 				key={index}
 				id={quote.q}
 				favList={favList}

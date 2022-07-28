@@ -13,10 +13,16 @@
 
 .bottom-container {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
   flex-direction: row;
 }
 
 .favorite-button {
 	margin-bottom: 10px;
+}
+
+.quote-image {
+  border-radius: 10px;
+  border: 2px solid black;
+  /* opacity: 0.5; */
 }
