@@ -17,9 +17,13 @@ const Favorites = ({setFavList, favList}: FavoriteProps) => {
     // we need to assign a key for this map to clear warning in console
 		return(
       <div className="favorite-card-wrapper">
-        <h2>"{favorite.q}"</h2>
-        <p>-{favorite.a}</p>
-        <button onClick={(e) => deleteFavorite(e)}>Delete</button>
+				<div className="top-container">
+					<h2>"{favorite.q}"</h2>
+					<p>-{favorite.a}</p>
+				</div>
+				<div className="bottom-container">
+        	<button className="delete-button" onClick={(e) => deleteFavorite(e)}>Delete</button>
+				</div>
       </div>
 		)
 	})

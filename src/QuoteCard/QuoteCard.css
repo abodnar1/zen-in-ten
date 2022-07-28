@@ -1,7 +1,22 @@
 .card-wrapper {
   box-sizing: border-box;
-  border: 3px solid black;
+  border: 2px solid black;
   padding: 10px;
 	border-radius: 10px;
-	
+	line-height: 2em;
+	letter-spacing: .10em;
+}
+
+.top-container {
+	height: 70%;
+}
+
+.bottom-container {
+	display: flex;
+	justify-content: flex-end;
+  flex-direction: row;
+}
+
+.favorite-button {
+	margin-bottom: 10px;
 }

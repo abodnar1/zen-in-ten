@@ -10,10 +10,6 @@
 	color: black;
 }
 
-.home-nav:active {
-	color: pink;
-}
-
 .favorites-nav {
 	text-decoration: none;
 	color: black;
@@ -25,7 +21,7 @@
 	text-decoration: underline;
 }
 
-.favorites-nav:active {
+.active {
 	text-decoration: underline;
 	border-radius: 5px;
 	padding: 2px;
