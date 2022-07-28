@@ -5,12 +5,12 @@ describe('Homepage', () => {
   })
 
   it('should have a nav bar with link to Favorites page', () => {
-    cy.get('nav').contains('Favorites').click()
+    cy.get('nav').contains('FAVORITES').click()
     cy.url().should('eq', 'http://localhost:3000/favorites')
   })
 
   it('should have a nav bar with link back to Home page', () => {
-    cy.get('nav').contains('Home').click()
+    cy.get('.nav-bar').get('.home-nav').click()
     cy.url().should('eq', 'http://localhost:3000/home')
   })
 
