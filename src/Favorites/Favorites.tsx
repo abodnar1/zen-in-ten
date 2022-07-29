@@ -25,8 +25,8 @@ const Favorites = ({setFavList, favList}: FavoriteProps) => {
     })
   return ( 
     <div className="favorites-container">
-    {favQuotes}
-  </div>
+      {favQuotes}
+    </div>
   )
 };
 
