@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import logo from '/Users/victoriafox-collis/turing/frontend/mod3/projects/zen-in-ten/public/assets/logo2.png'
 
 import './Nav.css'
-import { BsHouseDoor } from "react-icons/bs";
+import { BsHouseDoor, BsFillTrashFill } from "react-icons/bs";
 
 const Nav = () => {
 	return(
 		<nav className="nav-bar">
 				<NavLink className="home-nav" to='/home'><BsHouseDoor /></NavLink>
+				{/* <NavLink className="home-nav" to='/home'><BsFillTrashFill /></NavLink> */}
 				<NavLink className="favorites-nav" to='/favorites'>FAVORITES</NavLink>
 		</nav>
 	)

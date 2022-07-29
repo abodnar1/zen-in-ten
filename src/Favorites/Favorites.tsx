@@ -15,6 +15,7 @@ const Favorites = ({setFavList, favList}: FavoriteProps) => {
         <FavoriteCard
           quote={fav.q}
           author={fav.a}
+					image={fav.i}
           key={index}
           id={fav.q}
           setFavList={setFavList}
