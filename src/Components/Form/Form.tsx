@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
-import { QuoteInterface } from "../interfaces";
+import { QuoteInterface } from "../../interfaces";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;

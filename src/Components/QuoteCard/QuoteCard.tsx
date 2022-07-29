@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./QuoteCard.css";
-import { QuoteInterface } from "../interfaces";
+import { QuoteInterface } from "../../interfaces";
 import {AiFillHeart} from "react-icons/ai"
 import {AiOutlineHeart} from "react-icons/ai"
 

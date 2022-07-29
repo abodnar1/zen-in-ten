@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch, NavLink } from "react-router-dom";
-import { QuoteInterface } from "../interfaces";
+import { QuoteInterface } from "../../interfaces";
 import './App.css';
 
 // page components

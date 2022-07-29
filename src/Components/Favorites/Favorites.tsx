@@ -1,6 +1,6 @@
 import React from "react";
 import "./Favorites.css";
-import { QuoteInterface } from "../interfaces";
+import { QuoteInterface } from "../../interfaces";
 import FavoriteCard from "../FavoriteCard/FavoriteCard";
 
 interface FavoriteProps {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { QuoteInterface } from '../interfaces';
+import { QuoteInterface } from '../../interfaces';
 import "./FavoriteCard.css"
 // import DeleteIcon from 'public/assets/delete-icon.png'
 import { AiOutlineDelete } from "react-icons/ai";
