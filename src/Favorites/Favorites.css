@@ -10,6 +10,8 @@
 	margin-top: 50px;
 }
 
-.favorite-page-header {
-	
+.fave-msg {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-style: italic;
 }
