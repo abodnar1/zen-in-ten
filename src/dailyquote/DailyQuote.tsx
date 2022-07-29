@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import "./DailyQuote.css"
 interface DailyQuote {
   q: string;
   a: string;
@@ -18,9 +18,12 @@ const DailyQuote = () => {
 
 
   return (
-    <div>
-      {dailyQuote.q}
-      {dailyQuote.a}
+    <div className="daily-quote-wrapper">
+     <div className="top-container">
+        <h2 className="daily-quote">Daily Quote</h2>
+				<h2 className="quote" >"{dailyQuote.q}"</h2>
+				<p className="author" >-{dailyQuote.a}</p>
+			</div>
     </div>
   )
 }
