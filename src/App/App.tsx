@@ -31,7 +31,8 @@ const App = () => {
 
         <Route exact path="/favorites" >
 					<Nav />
-          <Favorites favList={favList} setFavList={setFavList} />
+          <h2 className="home-header">✨Favorites✨</h2>
+          {favList.length ? <Favorites favList={favList} setFavList={setFavList} /> : <h3>No favorites yet! Click on the heart to favorite a quote!</h3>}
         </Route>
 
       </Switch> 
