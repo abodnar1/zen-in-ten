@@ -24,13 +24,14 @@ const App = () => {
 
         <Route path="/home" >
 					<Nav />
-						<h2 className="home-header">✨It's time to get Zen in Ten✨</h2>
+						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
           <Form setAllQuotes={setAllQuotes}/>
           {allQuotes.length > 0 && <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/>}
         </Route>
 
         <Route exact path="/favorites" >
 					<Nav />
+					<h2 className="favorite-page-header">Favorites</h2>
           <Favorites favList={favList} setFavList={setFavList} />
         </Route>
 

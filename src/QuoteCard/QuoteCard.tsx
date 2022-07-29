@@ -36,10 +36,10 @@ const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCard
 
   return (
     <div className="card-wrapper">
-			<div className="middle-container">
+			<div className="top-container">
 				<img src={image} className="quote-image"></img>
 			</div>
-			<div className="top-container">
+			<div className="middle-container">
 				<h2 className="quote" >"{quote}"</h2>
 				<p className="author" >-{author}</p>
 			</div>
