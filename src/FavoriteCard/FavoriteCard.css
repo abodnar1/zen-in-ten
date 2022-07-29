@@ -10,7 +10,7 @@
 	transform: scale(1.1);
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
 }
-
+/* 
 .top-container {
 	height: 50%;
 	display: flex;
@@ -32,7 +32,7 @@
   flex-direction: row;
   align-content: stretch;
   align-items: flex-end;
-}
+} */
 
 .quote {
 	font-size: 15px;
@@ -45,9 +45,9 @@
 	text-align: center;
 }
 
-.quote-image {
+/* .quote-image {
 	border-radius: 10px;
-}
+} */
 
 .delete-button {
 	font-size: 1.5rem;
