@@ -19,7 +19,7 @@ const DailyQuote = () => {
 
   return (
     <div className="daily-quote-wrapper">
-     <div className="top-container">
+     <div className="daily-top-container">
         <h2 className="daily-quote">Daily Quote</h2>
 				<h2 className="quote" >"{dailyQuote.q}"</h2>
 				<p className="author" >-{dailyQuote.a}</p>
