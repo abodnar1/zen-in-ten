@@ -22,13 +22,13 @@ const FavoriteCard = ({quote, author, image, setFavList, favList, id}: FavoriteC
 
   return (
     <div className="favorite-card-wrapper">
-      <div className="top-container">
+			<div className="top-container">
+				<img src={image} className="quote-image"></img>
+			</div>
+      <div className="middle-container">
         <h2 className="quote">"{quote}"</h2>
         <p className="author">-{author}</p>
       </div>
-			<div className="middle-container">
-				<img src={image} className="quote-image"></img>
-			</div>
       <div className="bottom-container">
 				<span className="delete-button" onClick={(e) => deleteFavorite(e)}><AiOutlineDelete /></span>
       </div>

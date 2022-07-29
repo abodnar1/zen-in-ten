@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import logo from '/Users/victoriafox-collis/turing/frontend/mod3/projects/zen-in-ten/public/assets/logo2.png'
+import logo from './public/assets/logo2.png'
 
 import './Nav.css'
 import { BsHouseDoor, BsFillTrashFill } from "react-icons/bs";

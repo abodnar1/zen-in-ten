@@ -1,55 +1,67 @@
 .favorite-card-wrapper {
+	height: 450px;
+	width: 450px;
 	display: flex;
 	flex-direction: column;
   border: 2px solid gray;
-	border-radius: 10px;
+	border-radius: 50%;
 	background-color: white;
-}
-
-.favorite-card-wrapper:hover {
-	transform: scale(1.1);
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+	background-image: url('/public/assets/quote5.png');
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .top-container {
-	height: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-}
-
-.middle-container {
-	height: 40%;
+	height: 30%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 }
+
+.middle-container {
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
 
 .bottom-container {
 	height: 10%;
 	display: flex;
-	justify-content: flex-end;
-  flex-direction: row;
-  align-content: stretch;
-  align-items: flex-end;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-end;
 }
 
 .quote {
-	font-size: 15px;
+	font-size: small;
 	line-height: 2em;
 	letter-spacing: .10em;
 	text-align: center;
+	width: 47%;
+	margin-bottom: 0px;
 }
 
 .author {
 	text-align: center;
+	width: 40%;
+	margin-top: 3px;
 }
 
 .quote-image {
-	border-radius: 10px;
+	border-radius: 50px;
+	height: 80%;
 }
 
 .delete-button {
 	font-size: 1.5rem;
 	cursor: pointer;
+}
+
+.delete-button:hover {
+	transform: scale(1.1);
 }

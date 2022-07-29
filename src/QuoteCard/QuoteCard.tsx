@@ -37,11 +37,11 @@ const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCard
   return (
     <div className="card-wrapper">
 			<div className="top-container">
-				<h2 className="quote" >"{quote}"</h2>
-				<p className="author" >-{author}</p>
+				<img src={image} className="quote-image"></img>
 			</div>
 			<div className="middle-container">
-				<img src={image} className="quote-image"></img>
+				<h2 className="quote" >"{quote}"</h2>
+				<p className="author" >-{author}</p>
 			</div>
 			<div className="bottom-container">
 				{isFav ? <span className="favorite-button" onClick={(e) => deleteFavorite(e)}><AiFillHeart className="delete-heart"/></span> 

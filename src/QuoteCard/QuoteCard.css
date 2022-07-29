@@ -1,47 +1,48 @@
 .card-wrapper {
+	height: 450px;
+	width: 450px;
 	display: flex;
 	flex-direction: column;
   border: 2px solid gray;
-	border-radius: 10px;
+	border-radius: 50%;
 	background-color: white;
-}
-
-.card-wrapper:hover {
-	transform: scale(1.1);
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
-}
-
-.top-container {
-	height: 50%;
-	/* border: .5px solid blue; */
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	background-image: url('/public/assets/quote5.png');
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .middle-container {
-	height: 40%;
-	/* border: .5px solid purple; */
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.top-container {
+	height: 30%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 }
 
 .bottom-container {
 	height: 10%;
-	/* border: .5px solid pink; */
 	display: flex;
-	justify-content: flex-end;
-  flex-direction: row;
-  align-content: stretch;
-  align-items: flex-end;
+	justify-content: center;
+	flex-direction: row;
+	align-items: flex-end;
 }
 
 .quote {
-	font-size: 15px;
+	font-size: small;
 	line-height: 2em;
 	letter-spacing: .10em;
 	text-align: center;
+	width: 47%;
+	margin-bottom: 0px;
 }
 
 .daily-quote {
@@ -50,14 +51,21 @@
 
 .author {
 	text-align: center;
+	width: 40%;
+	margin-top: 3px;
 }
 
 .quote-image {
-	border-radius: 10px;
+	border-radius: 50px;
+	height: 80%;
 }
 
 .delete-heart, 
 .add-heart {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	cursor: pointer;
+}
+
+.add-heart:hover {
+	transform: scale(1.1);
 }

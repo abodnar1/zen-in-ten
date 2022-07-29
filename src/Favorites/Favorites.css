@@ -1,11 +1,13 @@
 .favorites-container {
 	display: flex;
-	justify-content: center;
-  padding: 20px;
+	flex-direction: row;
+	justify-content: space-evenly;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, .5fr);
 	grid-template-columns: repeat(auto-fit, 400px);
-  grid-gap: 50px;
+  grid-gap: 60px;
+	margin-right: 55px;
+	margin-top: 50px;
 }
 
 .fave-msg {
