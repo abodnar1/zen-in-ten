@@ -1,5 +1,3 @@
-import { createYield } from "typescript"
-
 describe('Homepage', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {fixture: "fairness_quotes"})
@@ -16,7 +14,7 @@ describe('Homepage', () => {
     cy.url().should('eq', 'http://localhost:3000/home')
   })
 
-  it('should have a dropdown menu to select mood and display appropriate cards', () => {
+  it('should have a dropdown menu to select mood and display appropriate cards; user should be able to click heart icon on card to save it to favorites page; user should be able to delete quote card from Favorites by clicking trash can icon', () => {
    cy.get('form').find('select').select('fairness')
    cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
 

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
+import { QuoteInterface } from "../interfaces";
 
 interface formProps {
-	setAllQuotes: Function;
+	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 }
-// why can't we change this to the React.Dispatch?
 
 interface Mood{
   k: string;
@@ -21,7 +21,7 @@ const Form = ({setAllQuotes}: formProps) => {
   }, [])
   // need a .catch() for error handling
 
- const fetchKeyword = (e: any): void => {
+ const fetchKeyword = (e: React.ChangeEvent<HTMLSelectElement>): void => {
   e.preventDefault()
 
   fetch(e.target.value)
