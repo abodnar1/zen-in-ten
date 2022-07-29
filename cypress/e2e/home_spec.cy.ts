@@ -1,3 +1,5 @@
+import { createYield } from "typescript"
+
 describe('Homepage', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {fixture: "fairness_quotes"})
@@ -23,5 +25,32 @@ describe('Homepage', () => {
 
    cy.get('.card-wrapper').eq(1).contains('h2', 'It is not fair to ask of others what you are not willing to do yourself.')
    cy.get('.card-wrapper').eq(1).contains('p', 'Eleanor Roosevelt')
+
+   cy.get('.favorite-button').first().click()
+
+   cy.get('.nav-bar').find('.favorites-nav').click()
+   cy.url().should('eq', 'http://localhost:3000/favorites')
+
+   cy.get('.favorite-card-wrapper').eq(0).contains('h2', 'Everything that is made beautiful and fair and lovely is made for the eye of one who sees.')
+   cy.get('.favorite-card-wrapper').eq(0).contains('p', 'Rumi')
+
+   cy.get('.delete-button').click()
+   cy.get('.favorites-container').find('.favorite-card-wrapper').should('have.length', 0)
+   cy.contains('h3', 'No favorites yet!')
   })
+
+  // it('should be able to click heart icon to favorite quote and add it to Favorites page', () => {
+  //   cy.get('.favorite-button').click()
+  // })
+
+  // it('should indicate user is on Favorites page in nav bar and header', () => {
+  //   cy.get('.nav-bar').find('.favorites-nav').should('have.class', 'active')
+  //   cy.contains('h2', 'Favorites')
+  // })
+
+  // it('should display a message if user has no quotes favorited', () => {
+  //   cy.get('.favorites-container').should('have.length', 0)
+  //   cy.contains('h3', 'No favorites yet!')
+  // })
+
 })
