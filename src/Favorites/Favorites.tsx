@@ -25,8 +25,8 @@ const Favorites = ({setFavList, favList}: FavoriteProps) => {
     })
   return ( 
     <div className="favorites-container">
-    {favQuotes}
-  </div>
+      {favList.length ? favQuotes : <h3 className="fave-msg">No favorites yet! Click on the heart to favorite a quote!</h3>}
+    </div>
   )
 };
 
