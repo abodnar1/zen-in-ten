@@ -1,0 +1,32 @@
+.daily-quote-wrapper {
+	display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+	flex-direction: row;
+  margin-top: 10em;
+
+}
+
+
+.daily-top-container {
+	height: 30%;
+  width: 30%;
+  background-color: white;
+  border: 2px solid gray;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.quote {
+	font-size: 15px;
+	line-height: 2em;
+	letter-spacing: .10em;
+	text-align: center;
+}
+
+.author {
+	text-align: center;
+}
