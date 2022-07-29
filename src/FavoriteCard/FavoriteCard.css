@@ -3,12 +3,12 @@
 	flex-direction: column;
   border: 2px solid gray;
 	border-radius: 10px;
+	background-color: white;
 }
 
 .favorite-card-wrapper:hover {
 	transform: scale(1.1);
-  color: black;
-  box-sizing: border-box;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
 }
 
 .top-container {

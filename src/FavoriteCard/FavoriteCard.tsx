@@ -30,7 +30,7 @@ const FavoriteCard = ({quote, author, image, setFavList, favList, id}: FavoriteC
 				<img src={image} className="quote-image"></img>
 			</div>
       <div className="bottom-container">
-				<button className="delete-button" onClick={(e) => deleteFavorite(e)}><AiOutlineDelete /></button>
+				<span className="delete-button" onClick={(e) => deleteFavorite(e)}><AiOutlineDelete /></span>
       </div>
     </div>
   )

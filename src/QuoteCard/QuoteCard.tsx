@@ -44,9 +44,9 @@ const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCard
 				<img src={image} className="quote-image"></img>
 			</div>
 			<div className="bottom-container">
-				{isFav ? <button className="favorite-button" onClick={(e) => deleteFavorite(e)}><AiFillHeart className="delete-heart"/></button> 
+				{isFav ? <span className="favorite-button" onClick={(e) => deleteFavorite(e)}><AiFillHeart className="delete-heart"/></span> 
 				: 
-				<button className="favorite-button" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></button>}
+				<span className="favorite-button" onClick={(e) => addFavorite(e)}><AiOutlineHeart className="add-heart"/></span>}
 			</div>
     </div>
   )

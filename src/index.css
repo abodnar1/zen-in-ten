@@ -1,11 +1,10 @@
 body {
   margin: 0;
-	/* font-family: 'Barlow Condensed', sans-serif; */
 	font-family: 'Newsreader', serif;
 	/* font-family: 'Open Sans', sans-serif; */
-	/* font-family: 'Oswald', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	background-color: #FEDC96;
 }
 
 code {
