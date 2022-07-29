@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Route, Switch, NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { Route, Switch } from "react-router-dom";
 import { QuoteInterface } from "../../interfaces";
 import './App.css';
 
@@ -18,11 +18,9 @@ const App = () => {
   return (
 		<div>
       <Switch>
-
         <Route exact path="/" >
           <Welcome />
         </Route>
-
         <Route path="/home" >
 					<Nav />
 						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
@@ -32,13 +30,11 @@ const App = () => {
             <DailyQuote />
           }
         </Route>
-
         <Route exact path="/favorites" >
 					<Nav />
 					<h2 className="favorite-page-header">Favorites</h2>
           <Favorites favList={favList} setFavList={setFavList} />
         </Route>
-
       </Switch> 
 		</div>
   );
