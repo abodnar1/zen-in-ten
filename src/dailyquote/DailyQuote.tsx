@@ -14,7 +14,7 @@ const DailyQuote = () => {
     fetch("/api/today?key=11ef57ae8191dde524535934c158c4543950e06c")
     .then(response => response.json())
     .then(data => setDailyQuote(data[0]))
-  })
+  }, [])
 
 
   return (

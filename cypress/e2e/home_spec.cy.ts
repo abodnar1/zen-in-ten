@@ -14,7 +14,7 @@ describe('Homepage', () => {
     cy.url().should('eq', 'http://localhost:3000/home')
   })
 
-  it('should have a dropdown menu to select mood and display appropriate cards', () => {
+  it('should have a dropdown menu to select mood and display appropriate cards; user should be able to click heart icon on card to save it to favorites page; user should be able to delete quote card from Favorites by clicking trash can icon', () => {
    cy.get('form').find('select').select('fairness')
    cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
 
@@ -23,5 +23,17 @@ describe('Homepage', () => {
 
    cy.get('.card-wrapper').eq(1).contains('h2', 'It is not fair to ask of others what you are not willing to do yourself.')
    cy.get('.card-wrapper').eq(1).contains('p', 'Eleanor Roosevelt')
+
+   cy.get('.favorite-button').first().click()
+
+   cy.get('.nav-bar').find('.favorites-nav').click()
+   cy.url().should('eq', 'http://localhost:3000/favorites')
+
+   cy.get('.favorite-card-wrapper').eq(0).contains('h2', 'Everything that is made beautiful and fair and lovely is made for the eye of one who sees.')
+   cy.get('.favorite-card-wrapper').eq(0).contains('p', 'Rumi')
+
+   cy.get('.delete-button').click()
+   cy.get('.favorites-container').find('.favorite-card-wrapper').should('have.length', 0)
+   cy.contains('h3', 'No favorites yet!')
   })
 })
