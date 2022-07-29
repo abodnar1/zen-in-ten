@@ -8,7 +8,7 @@ describe('Welcome Page', () => {
   })
 
   it('should have a description of the application', () => {
-    cy.get(".welcome-message").should("be.visible").contains("p", "blurb about site")
+    cy.get(".welcome-message").should("be.visible").contains("p", "YOU'RE ABOUT TO BE ZEN IN TEN")
   })
 
   it("should have a button to enter the site", () => {
