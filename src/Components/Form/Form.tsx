@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 import { QuoteInterface } from "../../interfaces";
+import { fetchQuotes } from "../../apiCalls";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
@@ -15,11 +16,10 @@ const Form = ({setAllQuotes}: formProps) => {
   const [moods, setMoods] = useState<Mood[]>([])
 
   useEffect(() => {
-    fetch("api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c")
-    .then(response => response.json())
+    fetchQuotes()
     .then(data => setMoods(data))
   }, [])
-  // need a .catch() for error handling
+  // need a .catch() for error handling?
 
  const fetchKeyword = (e: React.ChangeEvent<HTMLSelectElement>): void => {
   e.preventDefault()
