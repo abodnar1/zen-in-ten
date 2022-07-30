@@ -1,16 +1,7 @@
 import React from 'react'
-import { QuoteInterface } from '../../interfaces';
+import { FavoriteCardProps } from '../../interfaces';
 import "./FavoriteCard.css"
 import { AiOutlineDelete } from "react-icons/ai";
-
-interface FavoriteCardProps{
-  quote: string,
-  author: string,
-	image: string,
-  setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
-	favList: QuoteInterface[];
-  id: string
-}
 
 const FavoriteCard = ({quote, author, image, setFavList, favList, id}: FavoriteCardProps) => {
   const deleteFavorite = (e: any) => {

@@ -20,3 +20,12 @@ export interface DailyQuoteInterface {
 export interface FormProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 }
+
+export interface FavoriteCardProps {
+  quote: string,
+  author: string,
+	image: string,
+  setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
+	favList: QuoteInterface[];
+  id: string
+}

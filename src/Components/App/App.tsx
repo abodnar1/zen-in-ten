@@ -9,7 +9,7 @@ import Quotes from '../Quotes/Quotes';
 import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
 import Nav from '../Nav/Nav';
-import DailyQuote from '../dailyquote/DailyQuote';
+import DailyQuote from '../DailyQuote/DailyQuote';
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<QuoteInterface[]>([])
