@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
-import { QuoteInterface } from "../../interfaces";
+import { QuoteInterface, Mood } from "../../interfaces";
 import { fetchQuotes } from "../../apiCalls";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
-}
-
-interface Mood{
-  k: string;
-  l: string;
 }
 
 const Form = ({setAllQuotes}: formProps) => {

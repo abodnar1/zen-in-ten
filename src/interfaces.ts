@@ -5,3 +5,8 @@ export interface QuoteInterface {
   h?: string;
   c?: string;
 }
+
+export interface Mood{
+  k: string;
+  l: string;
+}
