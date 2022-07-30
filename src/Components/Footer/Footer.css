@@ -1,0 +1,40 @@
+.footer-container {
+	border-top: .5px solid black;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+}
+
+.top-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px;
+}
+
+.github-footer, 
+.linkedin-footer {
+	display: flex;
+	flex-direction: row;
+	font-family: 'Newsreader', serif;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+	line-height: 0;
+}
+
+.github, 
+.linkedin {
+	text-decoration: none;
+}
+
+.footer-header,
+.group-names {
+	margin: 0px;
+	font-weight: bolder;
+}
