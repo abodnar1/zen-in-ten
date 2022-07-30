@@ -34,3 +34,7 @@ export interface FavoriteProps {
 	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 	favList: QuoteInterface[];
 }
+
+export interface NavProps {
+  setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>
+}
