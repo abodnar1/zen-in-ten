@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
-import { QuoteInterface, Mood, FormProps } from "../../interfaces";
+import { Mood, FormProps } from "../../interfaces";
 import { fetchAllQuoteKeywords, fetchQuotesByKeyword } from "../../apiCalls";
 
 const Form = ({setAllQuotes}: FormProps) => {
@@ -15,13 +15,13 @@ const Form = ({setAllQuotes}: FormProps) => {
     e.preventDefault()
     fetchQuotesByKeyword(e.target.value)
     .then(data => setAllQuotes(data))
- }
+  }
  
  const moodValues = moods.map(mood => {
-   return(
+   return (
      <option value={mood.l} key={mood.k}>{mood.k}</option>
-   )
-})
+    )
+  })
 
   return (
     <form>
