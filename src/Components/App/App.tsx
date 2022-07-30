@@ -8,8 +8,8 @@ import Welcome from "../Welcome/Welcome";
 import Quotes from '../Quotes/Quotes';
 import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
-import Nav from '../Nav/Nav'
-import DailyQuote from '../dailyquote/DailyQuote';
+import Nav from '../Nav/Nav';
+import DailyQuote from '../DailyQuote/DailyQuote';
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<QuoteInterface[]>([])
@@ -22,7 +22,7 @@ const App = () => {
           <Welcome />
         </Route>
         <Route path="/home" >
-					<Nav />
+					<Nav setAllQuotes={setAllQuotes}/>
 						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
           <Form setAllQuotes={setAllQuotes}/>
           {allQuotes.length > 0 ? 
@@ -31,13 +31,13 @@ const App = () => {
           }
         </Route>
         <Route exact path="/favorites" >
-					<Nav />
-					<h2 className="favorite-page-header">Favorites</h2>
+					<Nav setAllQuotes={setAllQuotes}/>
+					  <h2 className="favorite-page-header">Favorites</h2>
           <Favorites favList={favList} setFavList={setFavList} />
         </Route>
       </Switch> 
 		</div>
-  );
+  )
 }
 
 export default App;
