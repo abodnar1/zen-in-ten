@@ -16,6 +16,7 @@ describe('Favorites page with no quotes', () => {
 
 describe('Favorites page with quotes', () => {
   beforeEach(() => {
+    cy.intercept('GET', 'https://zenquotes.io/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {fixture: "daily_quote"})
     cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {fixture: "fairness_quotes"})
     cy.visit('http://localhost:3000/home')
     cy.get('form').find('select').select('fairness')
