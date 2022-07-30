@@ -46,4 +46,11 @@ describe('Homepage', () => {
     cy.get('.favorite-button').first().get('svg').should('not.contain', 'add-heart')
   })
 
+  it('should be able to click favorite heart when already selected to unselect', () => {
+    cy.get('form').find('select').select('fairness')
+    cy.get('.favorite-button').last().click()
+    cy.get('.favorite-button').last().get('svg').should("have.class", 'delete-heart')
+    cy.get('.favorite-button').last().click()
+    cy.get('.favorite-button').last().get('svg').should('have.class', 'add-heart')
+  })
 })
