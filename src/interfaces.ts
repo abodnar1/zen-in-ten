@@ -29,3 +29,8 @@ export interface FavoriteCardProps {
 	favList: QuoteInterface[];
   id: string
 }
+
+export interface FavoriteProps {
+	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
+	favList: QuoteInterface[];
+}
