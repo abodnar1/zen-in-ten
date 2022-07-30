@@ -28,12 +28,5 @@ describe('Homepage', () => {
 
    cy.get('.nav-bar').find('.favorites-nav').click()
    cy.url().should('eq', 'http://localhost:3000/favorites')
-
-   cy.get('.favorite-card-wrapper').eq(0).contains('h2', 'Everything that is made beautiful and fair and lovely is made for the eye of one who sees.')
-   cy.get('.favorite-card-wrapper').eq(0).contains('p', 'Rumi')
-
-   cy.get('.delete-button').click()
-   cy.get('.favorites-container').find('.favorite-card-wrapper').should('have.length', 0)
-   cy.contains('h3', 'No favorites yet!')
   })
 })
