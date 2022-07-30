@@ -14,6 +14,7 @@ import DailyQuote from '../DailyQuote/DailyQuote';
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<QuoteInterface[]>([])
 	const [favList, setFavList] = useState<QuoteInterface[]>([])
+  const [error, setError] = useState<string>("")
 
   return (
 		<div>
@@ -24,10 +25,10 @@ const App = () => {
         <Route path="/home" >
 					<Nav setAllQuotes={setAllQuotes}/>
 						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
-          <Form setAllQuotes={setAllQuotes}/>
+          <Form setAllQuotes={setAllQuotes} setError={setError}/>
           {allQuotes.length > 0 ? 
             <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/> :
-            <DailyQuote />
+            <DailyQuote error={error} setError={setError}/>
           }
         </Route>
         <Route exact path="/favorites" >
