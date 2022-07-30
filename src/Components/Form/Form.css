@@ -1,7 +1,12 @@
-form, 
-.error-message {
+form {
 	display: flex;
 	justify-content: center;
+}
+
+.error-message {
+	text-align: center;
+	font-size: large;
+	padding-top: 20px;
 }
 
 .dropdown {

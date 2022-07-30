@@ -5,6 +5,18 @@
   margin-top: 10em;
 }
 
+.daily-quote-error {
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin-top: 10em;
+	font-weight: bold;
+	font-size: medium;
+	letter-spacing: .15em;
+}
+
 .daily-quote-container {
 	display: flex;
 	flex-direction: column;
