@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 import { QuoteInterface, Mood } from "../../interfaces";
-import { fetchQuoteKeywords } from "../../apiCalls";
+import { fetchAllQuoteKeywords, fetchQuotesByKeyword } from "../../apiCalls";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
@@ -11,20 +11,14 @@ const Form = ({setAllQuotes}: formProps) => {
   const [moods, setMoods] = useState<Mood[]>([])
 
   useEffect(() => {
-    fetchQuoteKeywords()
+    fetchAllQuoteKeywords()
     .then(data => setMoods(data))
   }, [])
-  // need a .catch() for error handling?
 
- const fetchKeyword = (e: React.ChangeEvent<HTMLSelectElement>): void => {
-  e.preventDefault()
-
-  fetch(e.target.value)
-    .then(response => response.json())
-    .then(data => {
-      setAllQuotes(data)
-    })
-    // need a .catch() for error handling?
+  const getQuotesOnChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    e.preventDefault()
+    fetchQuotesByKeyword(e.target.value)
+    .then(data => setAllQuotes(data))
  }
  
  const moodValues = moods.map(mood => {
@@ -35,7 +29,7 @@ const Form = ({setAllQuotes}: formProps) => {
 
   return (
     <form>
-      <select className="dropdown" name="select-mood" id="selectMood" onChange={(e) => fetchKeyword(e)}>
+      <select className="dropdown" name="select-mood" id="selectMood" onChange={(e) => getQuotesOnChange(e)}>
         <option value="choose">Choose a Mood</option>
         {moodValues}
       </select>
