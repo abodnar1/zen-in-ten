@@ -1,4 +1,4 @@
-import { createYield } from "typescript"
+/// <reference types="cypress" />
 
 describe('Homepage', () => {
   beforeEach(() => {
@@ -31,6 +31,19 @@ describe('Homepage', () => {
 
     cy.get('.card-wrapper').eq(1).contains('h2', 'It is not fair to ask of others what you are not willing to do yourself.')
     cy.get('.card-wrapper').eq(1).contains('p', 'Eleanor Roosevelt')
+  })
+
+  it('should have the add heart button when its not a favorite', () => {
+    cy.get('form').find('select').select('fairness')
+    cy.get('.favorite-button').first().get('svg').should('have.class', 'add-heart')
+    cy.get('.favorite-button').first().get('svg').should("not.contain", 'delete-heart')
+  })
+
+  it('should have the delete heart button when it has been favorited', () => {
+    cy.get('form').find('select').select('fairness')
+    cy.get('.favorite-button').first().click()
+    cy.get('.favorite-button').first().get('svg').should("have.class", 'delete-heart')
+    cy.get('.favorite-button').first().get('svg').should('not.contain', 'add-heart')
   })
 
 })
