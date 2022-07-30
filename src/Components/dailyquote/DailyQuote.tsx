@@ -3,7 +3,6 @@ import "./DailyQuote.css"
 import { DailyQuoteInterface } from "../../interfaces"
 import { fetchDailyQuote } from "../../apiCalls"
 
-
 const DailyQuote = () => {
   const fakeQuote = {q: "", a: "", h: ""}
   const [ dailyQuote, setDailyQuote] = useState<DailyQuoteInterface>(fakeQuote)
@@ -12,7 +11,6 @@ const DailyQuote = () => {
     fetchDailyQuote()
     .then(data => setDailyQuote(data[0]))
   }, [])
-
 
   return (
     <div className="daily-quote-wrapper">
