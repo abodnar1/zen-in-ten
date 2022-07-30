@@ -12,11 +12,6 @@ describe('Homepage', () => {
     cy.get('.daily-quote-wrapper').contains('p', "Peter Drucker")
   })
 
-  it('should have a nav bar with link to Favorites page', () => {
-    cy.get('nav').contains('FAVORITES').click()
-    cy.url().should('eq', 'http://localhost:3000/favorites')
-  })
-
   it('should have a nav bar with link back to Home page', () => {
     cy.get('.nav-bar').get('.home-nav').click()
     cy.url().should('eq', 'http://localhost:3000/home')
