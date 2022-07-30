@@ -17,7 +17,7 @@ export const fetchQuotesByKeyword = (keywordValue: string): Promise<QuoteInterfa
 }
 
 export const fetchDailyQuote = (): Promise<DailyQuoteInterface[]> => {
-  return fetch("/api/toda?key=11ef57ae8191dde524535934c158c4543950e06c")
+  return fetch("/api/today?key=11ef57ae8191dde524535934c158c4543950e06c")
   .then(response => response.json())
   .then(response => {
     return response as DailyQuoteInterface[]

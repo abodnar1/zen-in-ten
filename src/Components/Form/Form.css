@@ -1,4 +1,5 @@
-form {
+form, 
+.error-message {
 	display: flex;
 	justify-content: center;
 }
