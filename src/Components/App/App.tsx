@@ -10,6 +10,7 @@ import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
 import Nav from '../Nav/Nav';
 import DailyQuote from '../DailyQuote/DailyQuote';
+import Footer from '../Footer/Footer'
 
 const App = () => {
   const [allQuotes, setAllQuotes] = useState<QuoteInterface[]>([])
@@ -30,11 +31,13 @@ const App = () => {
             <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/> :
             <DailyQuote error={error} setError={setError}/>
           }
+					<Footer />
         </Route>
         <Route exact path="/favorites" >
 					<Nav setAllQuotes={setAllQuotes}/>
 					  <h2 className="favorite-page-header">Favorites</h2>
           <Favorites favList={favList} setFavList={setFavList} />
+					<Footer />
         </Route>
       </Switch> 
 		</div>
