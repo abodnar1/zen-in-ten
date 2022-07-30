@@ -15,6 +15,13 @@ export interface QuoteCardProps {
 	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 }
 
+export interface QuotesProps {
+  allQuotes: QuoteInterface[];
+  setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>
+	favList: QuoteInterface[];
+	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>
+}
+
 export interface Mood {
   k: string;
   l: string;
