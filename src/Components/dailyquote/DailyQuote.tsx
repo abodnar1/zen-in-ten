@@ -4,8 +4,8 @@ import { DailyQuoteInterface } from "../../interfaces"
 import { fetchDailyQuote } from "../../apiCalls"
 
 const DailyQuote = () => {
-  const fakeQuote = {q: "", a: "", h: ""}
-  const [ dailyQuote, setDailyQuote] = useState<DailyQuoteInterface>(fakeQuote)
+  const emptyQuote = {q: "", a: "", h: ""}
+  const [ dailyQuote, setDailyQuote] = useState<DailyQuoteInterface>(emptyQuote)
 
   useEffect(() => {
     fetchDailyQuote()
