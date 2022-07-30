@@ -1,7 +1,7 @@
 import React from "react";
 import "./Favorites.css";
-import { QuoteInterface } from "../interfaces";
-import FavoriteCard from "../FavoriteCard/FavoriteCard";
+import { QuoteInterface } from "../../interfaces";
+import FavoriteCard from "../../Components/FavoriteCard/FavoriteCard";
 
 interface FavoriteProps {
 	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;

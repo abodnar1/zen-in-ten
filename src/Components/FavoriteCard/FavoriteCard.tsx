@@ -1,7 +1,6 @@
 import React from 'react'
-import { QuoteInterface } from '../interfaces';
+import { QuoteInterface } from '../../interfaces';
 import "./FavoriteCard.css"
-// import DeleteIcon from 'public/assets/delete-icon.png'
 import { AiOutlineDelete } from "react-icons/ai";
 
 interface FavoriteCardProps{
@@ -23,7 +22,7 @@ const FavoriteCard = ({quote, author, image, setFavList, favList, id}: FavoriteC
   return (
     <div className="favorite-card-wrapper">
 			<div className="top-container">
-				<img src={image} className="quote-image"></img>
+				<img src={image} alt={author} className="quote-image"></img>
 			</div>
       <div className="middle-container">
         <h2 className="quote">"{quote}"</h2>

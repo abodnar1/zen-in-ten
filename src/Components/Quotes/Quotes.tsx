@@ -1,7 +1,7 @@
 import React from "react";
 import "./Quotes.css";
-import { QuoteInterface } from "../interfaces";
-import QuoteCard from "../QuoteCard/QuoteCard";
+import { QuoteInterface } from "../../interfaces";
+import QuoteCard from "../../Components/QuoteCard/QuoteCard";
 
 interface QuotesProps {
   allQuotes: QuoteInterface[];
