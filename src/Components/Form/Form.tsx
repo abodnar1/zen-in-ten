@@ -41,6 +41,6 @@ const Form = ({setAllQuotes}: formProps) => {
       </select>
     </form>
   )
-};
+}
 
 export default Form;
