@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 import { QuoteInterface, Mood } from "../../interfaces";
-import { fetchQuotes } from "../../apiCalls";
-import { setDefaultResultOrder } from "dns";
+import { fetchQuoteKeywords } from "../../apiCalls";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
@@ -12,7 +11,7 @@ const Form = ({setAllQuotes}: formProps) => {
   const [moods, setMoods] = useState<Mood[]>([])
 
   useEffect(() => {
-    fetchQuotes()
+    fetchQuoteKeywords()
     .then(data => setMoods(data))
   }, [])
   // need a .catch() for error handling?
