@@ -5,11 +5,13 @@
   height: 100vh;
 	flex-direction: row;
   margin-top: 10em;
-
 }
 
-
-.daily-top-container {
+.daily-quote-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	height: 30%;
   width: 30%;
   background-color: white;
