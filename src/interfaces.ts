@@ -6,6 +6,15 @@ export interface QuoteInterface {
   c?: string;
 }
 
+export interface QuoteCardProps {
+  quote: string;
+  author: string;
+  image: string;
+  id: string;
+	favList: QuoteInterface[];
+	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
+}
+
 export interface Mood {
   k: string;
   l: string;

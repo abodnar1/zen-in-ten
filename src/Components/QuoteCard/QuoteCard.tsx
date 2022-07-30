@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./QuoteCard.css";
-import { QuoteInterface } from "../../interfaces";
-import {AiFillHeart} from "react-icons/ai"
-import {AiOutlineHeart} from "react-icons/ai"
-
-interface QuoteCardProps {
-  quote: string;
-  author: string;
-  image: string;
-  id: string;
-	favList: QuoteInterface[];
-	setFavList: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
-}
+import { QuoteCardProps } from "../../interfaces";
+import {AiFillHeart} from "react-icons/ai";
+import {AiOutlineHeart} from "react-icons/ai";
 
 const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCardProps) => {
 	const [isFav, setIsFav] = useState<boolean>(false)
 
   useEffect(() => {
     setIsFav(!!favList.find(fav => fav.q === quote))
-  })
+  }, [favList, quote])
 	
 	const addFavorite = (e: React.FormEvent): void => {
 		e.preventDefault()
@@ -50,6 +41,6 @@ const QuoteCard = ({ quote, author, image, id, setFavList, favList } : QuoteCard
 			</div>
     </div>
   )
-};
+}
 
 export default QuoteCard;
