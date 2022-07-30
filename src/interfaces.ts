@@ -10,3 +10,9 @@ export interface Mood{
   k: string;
   l: string;
 }
+
+export interface DailyQuoteInterface {
+  q: string;
+  a: string;
+  h?: string;
+}
