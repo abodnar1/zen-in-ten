@@ -93,4 +93,5 @@ For Cypress Testing:
 * [TypeScript - the Basics](https://youtu.be/ahCwqrYpIuM)
 * [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 * [React TypeScript Cheat Sheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
+* [Making REST API calls with TypeScript](https://www.sohamkamani.com/typescript/rest-http-api-call/)
 * [Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress)
