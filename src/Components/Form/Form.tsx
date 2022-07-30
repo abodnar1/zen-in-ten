@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Form.css";
-import { QuoteInterface, Mood } from "../../interfaces";
+import { QuoteInterface, Mood, FormProps } from "../../interfaces";
 import { fetchAllQuoteKeywords, fetchQuotesByKeyword } from "../../apiCalls";
 
-interface formProps {
-	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
-}
-
-const Form = ({setAllQuotes}: formProps) => {
+const Form = ({setAllQuotes}: FormProps) => {
   const [moods, setMoods] = useState<Mood[]>([])
 
   useEffect(() => {

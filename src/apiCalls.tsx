@@ -23,4 +23,3 @@ export const fetchDailyQuote = (): Promise<DailyQuoteInterface[]> => {
     return response as DailyQuoteInterface[]
   })
 }
-

@@ -6,7 +6,7 @@ export interface QuoteInterface {
   c?: string;
 }
 
-export interface Mood{
+export interface Mood {
   k: string;
   l: string;
 }
@@ -15,4 +15,8 @@ export interface DailyQuoteInterface {
   q: string;
   a: string;
   h?: string;
+}
+
+export interface FormProps {
+	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
 }
