@@ -1,9 +1,4 @@
-// import { QuoteInterface } from "./interfaces"
-
-interface Mood{
-  k: string;
-  l: string;
-}
+import { Mood } from "./interfaces"
 
 export const fetchQuotes = (): Promise<Mood[]> => {
   return fetch("api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c")

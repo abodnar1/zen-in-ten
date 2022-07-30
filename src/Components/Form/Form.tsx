@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Form.css";
 import { QuoteInterface, Mood } from "../../interfaces";
 import { fetchQuotes } from "../../apiCalls";
+import { setDefaultResultOrder } from "dns";
 
 interface formProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
@@ -24,7 +25,7 @@ const Form = ({setAllQuotes}: formProps) => {
     .then(data => {
       setAllQuotes(data)
     })
-    // need a .catch() for error handling
+    // need a .catch() for error handling?
  }
  
  const moodValues = moods.map(mood => {
