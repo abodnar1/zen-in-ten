@@ -21,10 +21,11 @@ html, body {
 }
 
 .main-container {
-  height: 85vh;
+  min-height: 85vh;
 }
 
 .footer {
+  margin-top: 2em;
   height: 15vh;
 }
 

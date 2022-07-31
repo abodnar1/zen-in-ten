@@ -4,16 +4,23 @@
 	flex-direction: row;
   margin-top: 10em;
 }
+
+@media screen and (min-width: 500px) {
+  .daily-quote-container {
+    width: 50vw;
+  }
+}
+
 @media screen and (min-width: 768px){
   .daily-quote-container {
-    width: 30vw;
+    width: 40vw;
     max-width: 400px;
   }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 490) {
   .daily-quote-container {
-    width: 50vw;
+    width: 90vw;
   }
 }
 
