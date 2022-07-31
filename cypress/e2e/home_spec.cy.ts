@@ -12,7 +12,7 @@ describe('Homepage', () => {
     cy.get('.daily-quote-container').contains('p', "Peter Drucker")
   })
 
-  it.only('should display an error message if data is unable to load due to 400 error', () => {
+  it('should display an error message if daily quote is unable to load due to 400 error', () => {
     cy.intercept('http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
     cy.get('.daily-quote-wrapper').contains('p', 'Uh oh! We\'ve encountered an error!')
   })
