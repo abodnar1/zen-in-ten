@@ -2,8 +2,8 @@
 
 describe('Homepage', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {fixture: "fairness_quotes"})
-    cy.intercept('GET', 'https://zenquotes.io/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {fixture: "daily_quote"})
+    cy.intercept('GET', 'http://localhost:3000/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {statusCode: 200, fixture: "fairness_quotes"})
+    cy.intercept('GET', 'http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 200, fixture: "daily_quote"})
     cy.visit('http://localhost:3000/home')
   })
 
@@ -14,7 +14,7 @@ describe('Homepage', () => {
 
   it('should display an error message if daily quote is unable to load due to 400 error', () => {
     cy.intercept('http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
-    cy.get('.daily-quote-wrapper').contains('p', 'Uh oh! We\'ve encountered an error!')
+    cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
   it('should have a nav bar with link back to Home page', () => {
