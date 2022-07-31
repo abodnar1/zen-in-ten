@@ -1,3 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.main-div {
+  height: 100%;
+}
+
 .home-page-header {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
@@ -7,3 +19,12 @@
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 }
+
+.main-container {
+  height: 85%;
+}
+
+.footer {
+  height: 15%;
+}
+
