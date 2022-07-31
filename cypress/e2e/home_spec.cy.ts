@@ -74,14 +74,14 @@ describe('Homepage', () => {
     cy.get('.favorite-button').last().get('svg').should('have.class', 'add-heart')
   })
 
-  it('should display error message if dropdown is unable to load due to 400 error', () => {
+  it('should display error message if dropdown is unable to load moods due to 400 error', () => {
     cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 400
     })
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
 
-  it('should display error message if dropdown is unable to load due to 500 error', () => {
+  it('should display error message if dropdown is unable to load moods due to 500 error', () => {
     cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 500
     })
