@@ -5,6 +5,28 @@
   margin-top: 10em;
 }
 
+@media screen and (min-width: 500px) {
+  .daily-quote-container {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .daily-quote-container {
+    width: 40vw;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 490) {
+  .daily-quote-wrapper {
+    margin-top: 5em;
+  }
+  .daily-quote-container {
+    width: 90vw;
+  }
+}
+
 .daily-quote-error {
 	display: flex;
 	flex-direction: column;
@@ -22,8 +44,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 30%;
-  width: 30%;
   background-color: white;
   border: 2px solid gray;
 	border-radius: 10px;

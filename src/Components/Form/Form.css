@@ -9,8 +9,27 @@ form {
 	padding-top: 20px;
 }
 
+@media screen and (min-width: 490px){
+  .dropdown {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .dropdown {
+    width: 35%;
+  }
+}
+
+
+@media screen and (max-width: 489px){
+  .dropdown {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
 .dropdown {
-	width: 35%;
 	padding: 7px;
 	font-size: 17px;
 	text-align: center;
