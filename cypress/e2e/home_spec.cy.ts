@@ -68,4 +68,10 @@ describe('Homepage', () => {
     cy.intercept('GET', 'http://localhost:3000/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
+
+  it('should display error message if dropdown is unable to load due to 500 error', () => {
+    cy.intercept('GET', 'http://localhost:3000/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
+    cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
+  })
+
 })
