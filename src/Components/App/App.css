@@ -1,3 +1,16 @@
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+.main-div {
+  height: 100vh;
+}
+
 .home-page-header {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
@@ -7,3 +20,22 @@
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 }
+
+@media screen and (max-width: 490px) {
+  .main-container {
+    min-height: 85vh;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .main-container {
+    min-height: 85vh;
+  }
+}
+
+
+.footer {
+  margin-top: 2em;
+  min-height: 15vh;
+}
+

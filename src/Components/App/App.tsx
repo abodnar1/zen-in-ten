@@ -18,28 +18,35 @@ const App = () => {
   const [error, setError] = useState<string>("")
 
   return (
-		<div>
-      <Switch>
+		<div className="main-div">
+      <main className="main-container">
         <Route exact path="/" >
           <Welcome />
         </Route>
         <Route path="/home" >
-					<Nav setAllQuotes={setAllQuotes}/>
-						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
+          <Nav setAllQuotes={setAllQuotes}/>
+          <h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
           <Form setAllQuotes={setAllQuotes} setError={setError}/>
           {allQuotes.length > 0 ? 
             <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/> :
             <DailyQuote error={error} setError={setError}/>
           }
-					<Footer />
         </Route>
         <Route exact path="/favorites" >
-					<Nav setAllQuotes={setAllQuotes}/>
-					  <h2 className="favorite-page-header">Favorites</h2>
+          <Nav setAllQuotes={setAllQuotes}/>
+          <h2 className="favorite-page-header">Favorites</h2>
           <Favorites favList={favList} setFavList={setFavList} />
-					<Footer />
         </Route>
-      </Switch> 
+      </main>
+      <footer className="footer">
+        <Route path="/home">
+          <Footer />
+        </Route>
+        <Route exact path="/favorites" >
+          <Footer />
+        </Route>
+      </footer>
+
 		</div>
   )
 }

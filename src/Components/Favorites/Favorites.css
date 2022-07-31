@@ -1,18 +1,31 @@
-.favorites-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-  display: grid;
-  grid-template-columns: repeat(3, .5fr);
-	grid-template-columns: repeat(auto-fit, 400px);
-  grid-gap: 60px;
-	margin-right: 55px;
-	margin-top: 50px;
-	margin-bottom: 10%;
-}
-
 .fave-msg {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	font-style: italic;
+}
+
+@media screen and (max-width: 489px) {
+  .favorites-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 60px;
+  }
+}
+
+@media screen and (min-width: 490px){
+  .favorites-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 60px;
+    margin-right: 55px;
+    margin-top: 50px;
+  }
 }
