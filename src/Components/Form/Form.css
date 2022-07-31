@@ -3,6 +3,12 @@ form {
 	justify-content: center;
 }
 
+.error-message {
+	text-align: center;
+	font-size: large;
+	padding-top: 20px;
+}
+
 .dropdown {
 	width: 35%;
 	padding: 7px;

@@ -22,9 +22,11 @@ const DailyQuote = ({error, setError}: DailyQuoteProps) => {
     <div className="daily-quote-wrapper">
       {error && <p>Uh oh! We've encountered an error! {error}</p>}
       {dailyQuote.a === "zenquotes.io" ? 
-        <p>Uh oh! We've encountered an error! {dailyQuote.q}</p>
+				<div className="daily-quote-error">
+        	<p>Uh oh! We've encountered an error!<br></br> {dailyQuote.q}</p>
+				</div>
         :
-        <div className="daily-top-container">
+        <div className="daily-quote-container">
           <h2 className="daily-quote">Daily Quote</h2>
           <h2 className="quote" >"{dailyQuote.q}"</h2>
           <p className="author" >-{dailyQuote.a}</p>
