@@ -2,8 +2,14 @@
 
 describe('Homepage', () => {
   beforeEach(() => {
-    cy.intercept('GET', '/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {statusCode: 200, fixture: "fairness_quotes"})
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 200, fixture: "daily_quote"})
+    cy.intercept('GET', '/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {
+      statusCode: 200,
+      fixture: "fairness_quotes"
+    })
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+      statusCode: 200, 
+      fixture: "daily_quote"
+    })
     cy.visit('http://localhost:3000/home')
   })
 
@@ -13,12 +19,16 @@ describe('Homepage', () => {
   })
 
   it('should display an error message if daily quote is unable to load due to 400 error', () => {
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+      statusCode: 400
+    })
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
   it('should display an error message if daily quote is unable to load due to 500 error', () => {
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+      statusCode: 500
+    })
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
@@ -27,12 +37,12 @@ describe('Homepage', () => {
     cy.url().should('eq', 'http://localhost:3000/home')
   })
 
-  it('should have a favorites button', () => {
+  it('should have a nav bar with link to Favorites page', () => {
     cy.get('.nav-bar').find('.favorites-nav').click()
     cy.url().should('eq', 'http://localhost:3000/favorites')
   })
 
-  it('should have a dropdown menu to select mood and display appropriate cards; user should be able to click heart icon on card to save it to favorites page; user should be able to delete quote card from Favorites by clicking trash can icon', () => {
+  it('should have a dropdown menu to select mood and display appropriate cards', () => {
     cy.get('form').find('select').select('fairness')
     cy.get('.quotes-container').find('.card-wrapper').should('have.length', 2)
 
@@ -43,34 +53,38 @@ describe('Homepage', () => {
     cy.get('.card-wrapper').eq(1).contains('p', 'Eleanor Roosevelt')
   })
 
-  it('should have the add heart button when its not a favorite', () => {
+  it('should have the add heart button when quote card is not a favorite', () => {
     cy.get('form').find('select').select('fairness')
     cy.get('.favorite-button').first().get('svg').should('have.class', 'add-heart')
-    cy.get('.favorite-button').first().get('svg').should("not.contain", 'delete-heart')
+    cy.get('.favorite-button').first().get('svg').should('not.contain', 'delete-heart')
   })
 
-  it('should have the delete heart button when it has been favorited', () => {
+  it('should have the delete heart button when quote card has been favorited', () => {
     cy.get('form').find('select').select('fairness')
     cy.get('.favorite-button').first().click()
-    cy.get('.favorite-button').first().get('svg').should("have.class", 'delete-heart')
+    cy.get('.favorite-button').first().get('svg').should('have.class', 'delete-heart')
     cy.get('.favorite-button').first().get('svg').should('not.contain', 'add-heart')
   })
 
-  it('should be able to click favorite heart when already selected to unselect', () => {
+  it('should be able to click favorite heart on quote card when already selected to unselect', () => {
     cy.get('form').find('select').select('fairness')
     cy.get('.favorite-button').last().click()
-    cy.get('.favorite-button').last().get('svg').should("have.class", 'delete-heart')
+    cy.get('.favorite-button').last().get('svg').should('have.class', 'delete-heart')
     cy.get('.favorite-button').last().click()
     cy.get('.favorite-button').last().get('svg').should('have.class', 'add-heart')
   })
 
   it('should display error message if dropdown is unable to load due to 400 error', () => {
-    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
+    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {
+      statusCode: 400
+    })
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
 
   it('should display error message if dropdown is unable to load due to 500 error', () => {
-    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
+    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {
+      statusCode: 500
+    })
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
 
