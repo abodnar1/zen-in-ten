@@ -18,7 +18,10 @@
   }
 }
 
-@media screen and (max-width: 490) {
+@media (max-width: 490) {
+  .daily-quote-wrapper {
+    margin-top: 5em;
+  }
   .daily-quote-container {
     width: 90vw;
   }

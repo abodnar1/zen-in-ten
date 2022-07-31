@@ -20,12 +20,21 @@ html, body {
 	text-align: center;
 }
 
-.main-container {
-  min-height: 85vh;
+@media screen and (max-width: 490px) {
+  .main-container {
+    min-height: 85vh;
+  }
 }
+
+@media screen and (min-width: 490px) {
+  .main-container {
+    min-height: 85vh;
+  }
+}
+
 
 .footer {
   margin-top: 2em;
-  height: 15vh;
+  min-height: 15vh;
 }
 

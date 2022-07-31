@@ -15,22 +15,34 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0px;
+  padding-bottom: 5px;
 }
 
-.github-footer, 
-.linkedin-footer {
-	display: flex;
-	flex-direction: row;
-	font-family: 'Newsreader', serif;
-	font-weight: lighter;
-	margin: 0px;
-	padding: 0px;
-	line-height: 0;
+@media screen and (max-width: 500px) {
+  .footer-header {
+    font-size: 14px;
+  }
+  .team-footer {
+    flex-wrap: wrap;
+  }
 }
 
-.github, 
-.linkedin {
+.team-footer {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Newsreader', serif;
+  font-weight: lighter;
+  margin: 0px;
+  padding: 0px;
+  line-height: 0;
+}
+
+.team-footer p {
+  display: flex;
+  justify-content: center;
+}
+
+.team-link {
 	text-decoration: none;
 }
 
