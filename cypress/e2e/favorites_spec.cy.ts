@@ -1,11 +1,12 @@
-describe('Favorites page with no quotes', () => {
+describe('Favorites page with no quotes favorited', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/favorites')
   })
 
-  it('should indicate user is on Favorites page in nav bar and header', () => {
+  it('should indicate user is on Favorites page in url, nav bar, and header', () => {
     cy.get('.nav-bar').find('.favorites-nav').should('have.class', 'active')
     cy.contains('h2', 'Favorites')
+    cy.url().should('eq', 'http://localhost:3000/favorites')
   })
 
   it('should display a message if user has no quotes favorited', () => {
@@ -14,7 +15,7 @@ describe('Favorites page with no quotes', () => {
   })
 })
 
-describe('Favorites page with quotes', () => {
+describe('Favorites page with quote favorited', () => {
   beforeEach(() => {
     cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 200,
@@ -35,7 +36,7 @@ describe('Favorites page with quotes', () => {
    cy.get('.favorite-card-wrapper').eq(0).contains('p', 'Rumi')
   })
 
-  it('should be able to click delete button and show empty page with no quote message', () => {
+  it('should be able to click delete button and show empty page with no favorites yet message', () => {
     cy.get('.delete-button').click()
     cy.get('.favorites-container').find('.favorite-card-wrapper').should('have.length', 0)
     cy.contains('h3', 'No favorites yet!')
