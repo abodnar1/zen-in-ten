@@ -3,7 +3,7 @@ import "./Form.css";
 import { Mood, FormProps } from "../../interfaces";
 import { fetchAllQuoteKeywords, fetchQuotesByKeyword } from "../../apiCalls";
 
-const Form = ({setAllQuotes, setError}: FormProps) => {
+const Form = ({setAllQuotes, setError, error}: FormProps) => {
   const [moods, setMoods] = useState<Mood[]>([])
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Form = ({setAllQuotes, setError}: FormProps) => {
         </select>
       </form> 
       :
-      <p className="error-message">Uh oh! We are not in the mood. Please try again later.</p>
+      <p className="error-message">Uh oh! We are not in the mood. Please try again later. {error}</p>
     }
    </div> 
   )

@@ -10,7 +10,7 @@ interface DailyQuoteProps {
 
 const DailyQuote = ({error, setError}: DailyQuoteProps) => {
   const emptyQuote = {q: "", a: "", h: ""}
-  const [ dailyQuote, setDailyQuote] = useState<DailyQuoteInterface>(emptyQuote)
+  const [dailyQuote, setDailyQuote] = useState<DailyQuoteInterface>(emptyQuote)
 
   useEffect(() => {
     fetchDailyQuote()
