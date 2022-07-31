@@ -37,6 +37,7 @@ export interface DailyQuoteInterface {
 export interface FormProps {
 	setAllQuotes: React.Dispatch<React.SetStateAction<QuoteInterface[]>>;
   setError: React.Dispatch<React.SetStateAction<string>>;
+  error: string;
 }
 
 export interface FavoriteCardProps {

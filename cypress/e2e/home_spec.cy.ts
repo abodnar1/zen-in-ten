@@ -2,8 +2,8 @@
 
 describe('Homepage', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://zenquotes.io/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {statusCode: 200, fixture: "fairness_quotes"})
-    cy.intercept('GET', 'http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 200, fixture: "daily_quote"})
+    cy.intercept('GET', '/api/quotes/11ef57ae8191dde524535934c158c4543950e06c&keyword=fairness', {statusCode: 200, fixture: "fairness_quotes"})
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 200, fixture: "daily_quote"})
     cy.visit('http://localhost:3000/home')
   })
 
@@ -13,12 +13,12 @@ describe('Homepage', () => {
   })
 
   it('should display an error message if daily quote is unable to load due to 400 error', () => {
-    cy.intercept('GET', 'http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
   it('should display an error message if daily quote is unable to load due to 500 error', () => {
-    cy.intercept('GET', 'http://localhost:3000/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
+    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
@@ -65,12 +65,12 @@ describe('Homepage', () => {
   })
 
   it('should display error message if dropdown is unable to load due to 400 error', () => {
-    cy.intercept('GET', 'http://localhost:3000/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
+    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 400})
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
 
   it('should display error message if dropdown is unable to load due to 500 error', () => {
-    cy.intercept('GET', 'http://localhost:3000/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
+    cy.intercept('GET', '/api/keywords?key=11ef57ae8191dde524535934c158c4543950e06c', {statusCode: 500})
     cy.get('.error-message').contains('p', 'Uh oh! We are not in the mood. Please try again later.')
   })
 

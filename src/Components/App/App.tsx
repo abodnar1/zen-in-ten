@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/home" >
 					<Nav setAllQuotes={setAllQuotes}/>
 						<h2 className="home-page-header">✨It's time to get Zen in Ten✨</h2>
-          <Form setAllQuotes={setAllQuotes} setError={setError}/>
+          <Form setAllQuotes={setAllQuotes} setError={setError} error={error} />
           {allQuotes.length > 0 ? 
             <Quotes allQuotes={allQuotes} setAllQuotes={setAllQuotes} favList={favList} setFavList={setFavList}/> :
             <DailyQuote error={error} setError={setError}/>
