@@ -8,8 +8,8 @@ describe('Homepage', () => {
   })
 
   it('should have daily quote on home page load', () => {
-    cy.get('.daily-quote-wrapper').contains('h2', "The most important thing in communication is to hear what isn't being said.")
-    cy.get('.daily-quote-wrapper').contains('p', "Peter Drucker")
+    cy.get('.daily-quote-container').contains('h2', "The most important thing in communication is to hear what isn't being said.")
+    cy.get('.daily-quote-container').contains('p', "Peter Drucker")
   })
 
   it('should have a nav bar with link back to Home page', () => {
