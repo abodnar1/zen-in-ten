@@ -28,7 +28,8 @@ const Form = ({setAllQuotes, setError, error}: FormProps) => {
   return (
    <div>
     { moods.length && moods[0].a !== "zenquotes.io" ? 
-      <form>
+     <form>
+        <label htmlFor="select-mood"></label>
         <select className="dropdown" name="select-mood" id="selectMood" onChange={(e) => getQuotesOnChange(e)}>
           <option value="choose">Choose a Mood</option>
           {moodValues}
