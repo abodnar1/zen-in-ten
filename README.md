@@ -15,8 +15,10 @@
 ## Project Overview
 [description of project]
 
-[VISUALS GO HERE]
-![](name-of-giphy.gif)
+See it in Action!
+![Screen Recording 2022-08-01 at 7 33 34 AM](https://user-images.githubusercontent.com/98445902/182161938-4d150f36-c4e6-47ad-bd6c-6469213f8e52.gif)
+![Screen Recording 2022-08-01 at 7 36 32 AM](https://user-images.githubusercontent.com/98445902/182161956-6688acfa-9340-4a75-9ecd-1bfcee8715ca.gif)
+
 
 The [Turing School of Software and Design](https://turing.edu/) provided a project spec sheet for students to follow, which can be found [here](https://frontend.turing.edu/projects/module-3/stretch.html).
 
