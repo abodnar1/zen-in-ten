@@ -49,14 +49,7 @@ You can access this project through the deployed page [here](ADD DEPLOYED PAGE L
 
 
 ## Project Reflections
-#### Wins
-* Working with a tricky api! 
-* Learning more about cypress testing.
-* Learning Typescript and React hooks at the same time!
 
-#### Challenges
-* We experienced an interesting issue with error handling. The api assigns it's key values to an error message but the status code never changes. We had to work around this by adding a conditional that would look for their error message rather than a status code. 
-* Using an api with a link as a key value. At first, we thought this would be a benefit but we ran into some issues along the way because of this. If the api had genre or mood codes / id's we wouldn't have run into as many issues. 
 
 
 ## Roadmap
