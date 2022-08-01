@@ -13,7 +13,7 @@
 
 
 ## Project Overview
-[description of project]
+
 
 See it in Action!
 ![Screen Recording 2022-08-01 at 7 33 34 AM](https://user-images.githubusercontent.com/98445902/182161938-4d150f36-c4e6-47ad-bd6c-6469213f8e52.gif)
@@ -50,14 +50,20 @@ You can access this project through the deployed page [here](ADD DEPLOYED PAGE L
 
 ## Project Reflections
 #### Wins
+* Working with a tricky api! 
+* Learning more about cypress testing.
+* Learning Typescript and React hooks at the same time!
+
 #### Challenges
+* We experienced an interesting issue with error handling. The api assigns it's key values to an error message but the status code never changes. We had to work around this by adding a conditional that would look for their error message rather than a status code. 
+* Using an api with a link as a key value. At first, we thought this would be a benefit but we ran into some issues along the way because of this. If the api had genre or mood codes / id's we wouldn't have run into as many issues. 
 
 
 ## Roadmap
 Future features could include:
-* idea1
-* idea2
-* idea3
+* Give the user the ability to search for quotes by author and mood.
+* Give the user the ability to create an account / login.
+* Give the user the option to add in their own quotes or quotes they like that are not on our site.
 
 
 ## Setup
