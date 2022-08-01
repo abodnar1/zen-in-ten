@@ -45,7 +45,7 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 
 ## Deployed Page
-You can access this project through the deployed page [here](ADD DEPLOYED PAGE LINK HERE).
+You can access this project through the deployed page [here](https://zen-in-ten.herokuapp.com/).
 
 
 ## Project Reflections
