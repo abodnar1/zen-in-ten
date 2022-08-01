@@ -13,7 +13,7 @@
 
 
 ## Project Overview
-
+Zen in Ten was designed to bring inspiration to those who need to be uplifted or grounded by famous words. Use the dropdown on our homepage to select a mood and from there you can favorite any quotes that resonate with you. 
 
 See it in Action!
 ![Screen Recording 2022-08-01 at 7 33 34 AM](https://user-images.githubusercontent.com/98445902/182161938-4d150f36-c4e6-47ad-bd6c-6469213f8e52.gif)
@@ -64,6 +64,7 @@ Future features could include:
 * Give the user the ability to search for quotes by author and mood.
 * Give the user the ability to create an account / login.
 * Give the user the option to add in their own quotes or quotes they like that are not on our site.
+* Use a Spotify api to stream calming music as a user enters a quote page. 
 
 
 ## Setup
