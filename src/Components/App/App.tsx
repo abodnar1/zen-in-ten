@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { QuoteInterface } from "../../interfaces";
 import './App.css';
 
@@ -46,7 +46,6 @@ const App = () => {
           <Footer />
         </Route>
       </footer>
-
 		</div>
   )
 }
