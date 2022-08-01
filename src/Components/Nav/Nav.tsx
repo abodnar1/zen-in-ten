@@ -10,8 +10,8 @@ const Nav = ({ setAllQuotes }: NavProps)  => {
 
 	return(
 		<nav className="nav-bar">
-      <NavLink className="home-nav" to='/home' onClick={(e) => clearQuoteContainer(e)}><BsHouseDoor /></NavLink>
-      <NavLink className="favorites-nav" to='/favorites'>FAVORITES</NavLink>
+      <NavLink className="home-nav" to='/home' aria-label="Home" onClick={(e) => clearQuoteContainer(e)}><BsHouseDoor /></NavLink>
+      <NavLink className="favorites-nav" to='/favorites' aria-label="Favorites">FAVORITES</NavLink>
 		</nav>
 	)
 }
