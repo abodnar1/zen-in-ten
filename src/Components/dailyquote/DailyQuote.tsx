@@ -16,7 +16,7 @@ const DailyQuote = ({error, setError}: DailyQuoteProps) => {
     fetchDailyQuote()
     .then(data => setDailyQuote(data[0]))
     .catch(error => setError(error.message))
-  }, [])
+  })
 
   return (
     <div className="daily-quote-wrapper">
