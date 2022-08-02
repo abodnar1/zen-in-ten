@@ -6,7 +6,7 @@ describe('Homepage', () => {
       statusCode: 200,
       fixture: "fairness_quotes"
     })
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+    cy.intercept('GET', '/api/today/11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 200, 
       fixture: "daily_quote"
     })
@@ -19,14 +19,14 @@ describe('Homepage', () => {
   })
 
   it('should display an error message if daily quote is unable to load due to 400 error', () => {
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+    cy.intercept('GET', '/api/today/11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 400
     })
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
   })
 
   it('should display an error message if daily quote is unable to load due to 500 error', () => {
-    cy.intercept('GET', '/api/today?key=11ef57ae8191dde524535934c158c4543950e06c', {
+    cy.intercept('GET', '/api/today/11ef57ae8191dde524535934c158c4543950e06c', {
       statusCode: 500
     })
     cy.contains('p', 'Uh oh! We\'ve encountered an error!')
