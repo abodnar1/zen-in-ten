@@ -4,8 +4,8 @@ Visit the deployed site [here](https://zen-in-ten.herokuapp.com/).
 ## Table of Contents
 - [Summary](#summary)
 - [Setup](#setup)
-- [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
+- [Learning Goals](#learning-goals)
 - [Project Reflections](#project-reflections)
 - [Roadmap](#roadmap)
 - [Contributors](#contributors)
@@ -32,11 +32,6 @@ For Cypress Testing:
 2. Follow the prompts in the browser and select the spec file you want to run
 
 
-## Learning Goals
-- Self-teach a new technology and implement it in an application that sources at least one external API. Our group chose TypeScript.
-- To expand/deepen our understanding of our learning process & dynamics within a team.
-
-
 ## Technologies and Tools
 * TypeScript
 * React
@@ -45,12 +40,17 @@ For Cypress Testing:
 * REST API
 * HTML
 * CSS
-* Cypress
+* Cypress Testing
 * Postman
 * npm
 * Webpack
 * GitHub Issues
 * GitHub Projects
+
+
+## Learning Goals
+- Self-teach a new technology and implement it in an application that sources at least one external API. Our group chose TypeScript.
+- To expand/deepen our understanding of our learning process & dynamics within a team.
 
 
 ## Project Reflections
