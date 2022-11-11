@@ -1,10 +1,10 @@
 # Zen-In-Ten
+Visit the deployed site [here](https://zen-in-ten.herokuapp.com/).
 
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
-- [Deployed Page](#deployed-page)
 - [Project Reflections](#project-reflections)
 - [Roadmap](#roadmap)
 - [Setup](#setup)
@@ -42,10 +42,6 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 * Webpack
 * GitHub Issues
 * GitHub Projects
-
-
-## Deployed Page
-You can access this project through the deployed page [here](https://zen-in-ten.herokuapp.com/).
 
 
 ## Project Reflections
