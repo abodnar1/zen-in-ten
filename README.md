@@ -1,5 +1,5 @@
 # Zen-In-Ten
-Visit the deployed site [here](https://zen-in-ten.herokuapp.com/).
+Visit the deployed site [here](https://zen-in-ten-delta.vercel.app/).
 
 ## Table of Contents
 - [Summary](#summary)
