@@ -2,6 +2,11 @@
   "name": "zen-in-ten",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abodnar1/zen-in-ten.git",
+    "homepage": "http://abodnar1.github.io/zen-in-ten"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -24,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +53,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
-    "cypress": "^10.3.1"
+    "cypress": "^10.3.1",
+    "gh-pages": "^4.0.0"
   }
 }
